@@ -87,3 +87,9 @@ span.btn-primary:hover {
   border-color: transparent;
   text-shadow: 1px 1px 0 #8CB7DD;
 }
+
+@media (max-width: 575px) {
+  .jumbotron h1.display-1 {
+    font-size: 4rem;
+  }
+}
