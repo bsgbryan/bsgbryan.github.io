@@ -26,7 +26,6 @@ github_username:  bsgbryan
 
 # Build settings
 markdown: kramdown
-theme: bsgbryan
 gems:
   - jekyll-feed
 exclude:

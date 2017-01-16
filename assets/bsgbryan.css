@@ -1,0 +1,89 @@
+.jumbotron {
+  background-color: #FFF7FF;
+  box-shadow: 3px 3px 0 #FFE3D4, 6px 6px 0 #FFF3BB;
+  margin-top: 2rem;
+}
+
+.jumbotron h1.display-1 {
+  text-shadow: 3px 1.5px 0 #bbf, 6px 3px 0 #ddf;
+  color: #2F2F40;
+}
+
+.jumbotron hr.my-4 {
+  border-top: 1px solid rgba(208, 208, 240, 0.25);
+}
+
+.jumbotron p.lead {
+  letter-spacing: 1px;
+  color: #B2A35F;
+}
+
+.footer.container {
+  margin-top: 4rem;
+  margin-bottom: 2em;
+}
+
+.footer .fa:hover {
+  text-decoration: none;
+}
+
+.card-deck {
+  margin-bottom: 2rem;
+}
+
+.card {
+  background-color: #EFFDFF;
+  box-shadow: 2px 2px 0 #C7FFB5, 4px 4px 0 #FFF3BB;
+  margin-top: 2rem;
+  border: none;
+}
+
+.card p.card-text {
+  color: #7171B2;
+}
+
+.card h4.card-title {
+  color: #37377F;
+}
+
+.card-footer {
+  border-top: none;
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+.card .card-footer small.text-muted {
+  color: #93CC81!important;
+  text-transform: uppercase;
+}
+
+span.btn-primary {
+  text-shadow: none;
+}
+
+span.btn-primary:hover {
+  cursor: default;
+}
+
+.btn-primary {
+  background-color: #AED9FF;
+  border-color: transparent;
+  text-shadow: 1px 1px 0 #8CB7DD;
+}
+
+.btn-primary:hover {
+  background-color: #AED9FF;
+  border-color: transparent;
+  text-shadow: 1px 1px 0 #8CB7DD;
+}
+
+.btn-primary:active {
+  background-color: #AED9FF;
+  border-color: transparent;
+  text-shadow: 1px 1px 0 #8CB7DD;
+}
+
+.btn-primary:visited {
+  background-color: #AED9FF;
+  border-color: transparent;
+  text-shadow: 1px 1px 0 #8CB7DD;
+}
