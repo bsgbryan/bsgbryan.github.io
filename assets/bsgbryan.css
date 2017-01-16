@@ -1,11 +1,11 @@
 .jumbotron {
   background-color: #FFF7FF;
-  box-shadow: 3px 3px 0 #FFE3D4, 6px 6px 0 #FFF3BB;
+  box-shadow: 2px 4px 0 #FFE3D4, 4px 8px 0 #FFF3BB;
   margin-top: 2rem;
 }
 
 .jumbotron h1.display-1 {
-  text-shadow: 3px 1.5px 0 #bbf, 6px 3px 0 #ddf;
+  text-shadow: 2px 4px 0 #bbf, 4px 8px 0 #ddf;
   color: #2F2F40;
 }
 
@@ -33,7 +33,7 @@
 
 .card {
   background-color: #EFFDFF;
-  box-shadow: 2px 2px 0 #C7FFB5, 4px 4px 0 #FFF3BB;
+  box-shadow: 1.5px 3px 0 #FFE3D4, 3px 6px 0 #FFF3BB;
   margin-top: 2rem;
   border: none;
 }
@@ -43,7 +43,8 @@
 }
 
 .card h4.card-title {
-  color: #37377F;
+  color: #2F2F40;
+  text-shadow: 1px 2px 0 rgba(187,187,255, 0.5), 2px 4px 0 rgba(221,221,255, 0.5);
 }
 
 .card-footer {
@@ -57,7 +58,7 @@
 }
 
 span.btn-primary {
-  text-shadow: none;
+  color: #AED9FF;
 }
 
 span.btn-primary:hover {
@@ -65,27 +66,36 @@ span.btn-primary:hover {
 }
 
 .btn-primary {
-  background-color: #AED9FF;
-  border-color: transparent;
-  text-shadow: 1px 1px 0 #8CB7DD;
+  background-color: transparent;
+  border-color: #AED9FF;
+  color: #8CB7DD;
 }
 
 .btn-primary:hover {
-  background-color: #AED9FF;
-  border-color: transparent;
-  text-shadow: 1px 1px 0 #8CB7DD;
+  background-color: transparent;
+  border-color: #AED9FF;
+  color: #8CB7DD;
 }
 
 .btn-primary:active {
-  background-color: #AED9FF;
-  border-color: transparent;
-  text-shadow: 1px 1px 0 #8CB7DD;
+  background-color: transparent;
+  border-color: #AED9FF;
+  color: #8CB7DD;
 }
 
 .btn-primary:visited {
-  background-color: #AED9FF;
-  border-color: transparent;
-  text-shadow: 1px 1px 0 #8CB7DD;
+  background-color: transparent;
+  border-color: #AED9FF;
+  color: #8CB7DD;
+}
+
+.btn-primary:focus {
+  box-shadow: none;
+}
+
+.footer a.fa {
+  text-shadow: 0.5px 1px 0 #FFE3D4, 1px 2px 0 #FFF3BB;
+  color: #7171B2;
 }
 
 @media (max-width: 575px) {
