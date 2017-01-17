@@ -25,6 +25,8 @@ $lead-text-color:    rgb(178,163,95)
 
 $base-vertical-whitespace: 2rem
 
+$base-letter-spacing: 1px
+
 =shadow($mode, $n, $front, $back)
   #{$mode}-shadow: #{$n}px #{$n * 2}px 0 $front, #{$n * 2}px #{$n * 4}px 0 $back
 
@@ -43,13 +45,13 @@ hr.my-2,
     color: $heading-text-color
 
   p.lead
-    letter-spacing: 1px
+    letter-spacing: $base-letter-spacing
     color: $lead-text-color
 
 
 .nav .nav-link
   text-transform: lowercase
-  letter-spacing: 1px
+  letter-spacing: $base-letter-spacing
   color: $available-link-color
 
   &.active
@@ -79,7 +81,7 @@ hr.my-2,
 
     h4.card-title
       color: $heading-text-color
-      text-shadow: $heading-text-shadow
+      +shadow('text', 1, $heading-shadow-front-color, $heading-shadow-back-color)
 
   .card-footer
     border-top: none
@@ -118,7 +120,7 @@ span.btn-primary
   margin-top: $base-vertical-whitespace
 
   h1
-    text-shadow: $heading-text-shadow
+    +shadow('text', 1, $heading-shadow-front-color, $heading-shadow-back-color)
     color: $heading-text-color
 
   p
