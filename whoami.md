@@ -10,7 +10,7 @@ tagline: A brief history of bsgbryan
 - - -
 
 I was born as a young age. Fresh-faced, hopeful, and screaming I came into the
-world with one mission: _eat_. Immediately after that my next mission became clear.
+world with one mission: _eat_. Quickly, my next mission became clear.
 
 I was born during the [Blizzard of '78](http://www.blizzardof78.org/) in
 [Superior Township, MI](https://www.google.com/maps/place/Superior+Charter+Twp,+MI/@42.3042811,-83.6729353,12z/data=!3m1!4b1!4m5!3m4!1s0x883caa107d008219:0x64b83e033a683017!8m2!3d42.3010178!4d-83.6051935) precisely on my due
