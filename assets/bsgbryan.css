@@ -3,6 +3,18 @@
  * https://color.adobe.com/create/color-wheel/?base=2&rule=Complementary&selected=4&name=My%20Color%20Theme&mode=rgb&rgbvalues=0.4433333333333333,0.44333333333339164,0.7,0.8333333333333333,0.8333333333333712,1,0.7333333333333333,0.7333333333333333,1,0.7,0.6407258064514811,0.37333333333333324,1,0.9516129032256989,0.7333333333333333&swatchOrder=0,1,2,3,4
  */
 
+ hr.my-4 {
+   border-top: 1px solid rgba(208, 208, 240, 0.25);
+ }
+
+ hr.my-2 {
+   border-top: 1px solid rgba(208, 208, 240, 0.25);
+ }
+
+ #content hr {
+   border-top: 1px solid rgba(208, 208, 240, 0.25);
+ }
+
 .jumbotron {
   background-color: #FFF7FF;
   box-shadow: 2px 4px 0 #FFE3D4, 4px 8px 0 #FFF3BB;
@@ -14,13 +26,19 @@
   color: #2F2F40;
 }
 
-.jumbotron hr.my-4 {
-  border-top: 1px solid rgba(208, 208, 240, 0.25);
-}
-
 .jumbotron p.lead {
   letter-spacing: 1px;
   color: #B2A35F;
+}
+
+.nav .nav-link {
+  text-transform: lowercase;
+  letter-spacing: 1px;
+  color: #8CB7DD;
+}
+
+.nav .nav-link.active {
+  color: #AED9FF;
 }
 
 .footer.container {
@@ -101,6 +119,27 @@ span.btn-primary:hover {
 .footer a.fa {
   text-shadow: 0.5px 1px 0 #FFE3D4, 1px 2px 0 #FFF3BB;
   color: #7171B2;
+}
+
+#content {
+  margin-top: 2rem;
+}
+
+#content h1 {
+  text-shadow: 1px 2px 0 #bbf, 2px 4px 0 #ddf;
+  color: #2F2F40;
+}
+
+#content p {
+  color: #7171B2;
+}
+
+#content p a {
+  color: #8CB7DD;
+}
+
+#content p + h1 {
+  margin-top: 2rem;
 }
 
 @media (max-width: 575px) {
