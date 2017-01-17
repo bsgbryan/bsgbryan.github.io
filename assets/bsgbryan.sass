@@ -122,7 +122,7 @@ span.btn-primary
 #content
   margin-top: $base-vertical-whitespace
 
-  h1
+  h1, h2, h3
     +shadow('text', 1, $heading-shadow-front-color, $heading-shadow-back-color)
     color: $heading-text-color
 
@@ -132,8 +132,23 @@ span.btn-primary
     a
       color: $available-link-color
 
-    & + h1
+    & + h1,
+    & + h2,
+    & + h3
       margin-top: $base-vertical-whitespace
+
+
+.language-sh
+  margin-top:    $base-vertical-whitespace
+  margin-bottom: $base-vertical-whitespace
+
+  .highlight
+    padding: 1rem 1.5rem
+    background-color: lighten(#8C8CBF, 32%)
+    color: lighten(#5D5D7F, 10%)
+
+    .gp
+      color: lighten(#5D5D7F, 30%)
 
 
 @media (max-width: 575px)
