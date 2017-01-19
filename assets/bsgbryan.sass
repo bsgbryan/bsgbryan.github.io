@@ -27,6 +27,8 @@ $base-vertical-whitespace: 2rem
 
 $base-letter-spacing: 1px
 
+$base-syntax-color: rgb(93,93,127)
+
 =shadow($mode, $n, $front, $back)
   #{$mode}-shadow: #{$n}px #{$n * 2}px 0 $front, #{$n * 2}px #{$n * 4}px 0 $back
 
@@ -39,7 +41,7 @@ hr.my-2,
 
 
 .jumbotron
-  background-color: #FFF7FF
+  background-color: rgb(255,247,255)
   +shadow('box', 2, $box-shadow-front-color, $box-shadow-back-color)
   margin-top: $base-vertical-whitespace
 
@@ -74,7 +76,7 @@ hr.my-2,
   margin-bottom: $base-vertical-whitespace
 
   .card
-    background-color: #EFFDFF
+    background-color: rgb(239,253,255)
     +shadow('box', 1.5, $box-shadow-front-color, $box-shadow-back-color)
     margin-top: $base-vertical-whitespace
     border: none
@@ -91,7 +93,7 @@ hr.my-2,
     background-color: rgba(255, 243, 187, 0.1)
 
     small.text-muted
-      color: #93CC81!important
+      color: rgb(147,204,129) !important
       text-transform: uppercase
 
 
@@ -145,12 +147,12 @@ span.btn-primary
       padding: 1rem 1.5rem
 
       .gp
-        color: lighten(#5D5D7F, 30%)
+        color: lighten($base-syntax-color, 30%)
 
   .language-sh .highlight,
   p > code.highlighter-rouge
-    background-color: lighten(#8C8CBF, 32%)
-    color: lighten(#5D5D7F, 10%)
+    background-color: lighten(rgb(140,140,191), 32%)
+    color: lighten($base-syntax-color, 10%)
 
 
 @media (max-width: 575px)
