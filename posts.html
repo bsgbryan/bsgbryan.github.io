@@ -1,0 +1,24 @@
+---
+layout:  default
+hero:    blog('all')
+tagline: They see me rollin' ...
+---
+<div class="card-deck row">
+  {% for post in site.posts %}
+    <div class="col-sm-6 col-lg-4">
+      <div class="card">
+        <div class="card-block">
+          <h4 class="card-title">{{ post.title }}</h4>
+          <hr class="my-2">
+          <p class="card-text">{{ post.tagline }}</p>
+          <a href="{{ post.url }}" class="btn btn-primary">Read</a>
+        </div>
+        <div class="card-footer">
+          {% for category in post.categories %}
+            <small class="text-muted">{{ category }}</small>
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+  {% endfor %}
+</div>
