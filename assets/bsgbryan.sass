@@ -4,8 +4,8 @@
 // COLOR THEME:
 // https://color.adobe.com/create/color-wheel/?base=2&rule=Complementary&selected=4&name=My%20Color%20Theme&mode=rgb&rgbvalues=0.4433333333333333,0.44333333333339164,0.7,0.8333333333333333,0.8333333333333712,1,0.7333333333333333,0.7333333333333333,1,0.7,0.6407258064514811,0.37333333333333324,1,0.9516129032256989,0.7333333333333333&swatchOrder=0,1,2,3,4
 
-$page-shadow-front-color: rgba(187, 187, 255, 1)
-$page-shadow-back-color:  rgba(221, 221, 255, 1)
+$page-shadow-front-color: rgb(187, 187, 255)
+$page-shadow-back-color:  rgb(221, 221, 255)
 
 $heading-shadow-front-color: transparentize($page-shadow-front-color, 0.5)
 $heading-shadow-back-color:  transparentize($page-shadow-back-color,  0.5)
@@ -37,7 +37,7 @@ $base-syntax-color: rgb(93,93,127)
 hr.my-4,
 hr.my-2,
 #content hr,
-  border-top: 1px solid transparentize(rgba(208,208,240), 0.75)
+  border-top: 1px solid transparentize(rgb(208,208,240), 0.75)
 
 
 .jumbotron
@@ -90,7 +90,7 @@ hr.my-2,
 
   .card-footer
     border-top: none
-    background-color: transparentize(rgba(255,243,187), 0.9)
+    background-color: transparentize(rgb(255,243,187), 0.9)
 
     small.text-muted
       color: rgb(147,204,129) !important
