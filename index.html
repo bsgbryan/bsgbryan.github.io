@@ -4,73 +4,20 @@ title:   Projects
 hero:    bsgbryan
 tagline: Passioate father, rabid technologist
 ---
-<div class="card-deck">
-  <div class="card">
-    <div class="card-block">
-      <h4 class="card-title">Skyll</h4>
-      <hr class="my-2">
-      <p class="card-text">A procedural level generator for 2/2.5d platformers</p>
-      <a href="https://github.com/bsgbryan/skyll" class="btn btn-primary" target="_blank">View on GitHub</a>
+<div class="card-deck row">
+  {% for project in site.data.projects %}
+    <div class="col-sm-6 col-lg-4">
+      <div class="card">
+        <div class="card-block">
+          <h4 class="card-title">{{ project.name }}</h4>
+          <hr class="my-2">
+          <p class="card-text">{{ project.pitch }}</p>
+          <a href="{{ project.href }}" class="btn btn-primary" target="_blank">{{ project.action }}</a>
+        </div>
+        <div class="card-footer">
+          <small class="text-muted">{{ project.type }}</small>
+        </div>
+      </div>
     </div>
-    <div class="card-footer">
-      <small class="text-muted">Framework</small>
-    </div>
-  </div>
-  <div class="card">
-    <div class="card-block">
-      <h4 class="card-title">Modül</h4>
-      <hr class="my-2">
-      <p class="card-text">An elegant way to make everything beautifully asynchronous</p>
-      <span class="btn btn-primary">Coming Soon</span>
-    </div>
-    <div class="card-footer">
-      <small class="text-muted">Library</small>
-    </div>
-  </div>
-  <div class="card">
-    <div class="card-block">
-      <h4 class="card-title">Together</h4>
-      <hr class="my-2">
-      <p class="card-text">A simple, fun, fully asynchronous api framework - built on Modül</p>
-      <span class="btn btn-primary">Coming Soon</span>
-    </div>
-    <div class="card-footer">
-      <small class="text-muted">Framework</small>
-    </div>
-  </div>
-</div>
-<div class="card-deck">
-  <div class="card">
-    <div class="card-block">
-      <h4 class="card-title">Jumpy McRunface</h4>
-      <hr class="my-2">
-      <p class="card-text">A fun, zen little infinite platformer for iOS</p>
-      <a href="https://itunes.apple.com/us/app/jumpy-mcrunface/id1151471322?mt=8" class="btn btn-primary" target="_blank">View on iTunes</a>
-    </div>
-    <div class="card-footer">
-      <small class="text-muted">Game</small>
-    </div>
-  </div>
-  <div class="card">
-    <div class="card-block">
-      <h4 class="card-title">My Music</h4>
-      <hr class="my-2">
-      <p class="card-text">Tunes I've made over the years</p>
-      <a href="https://soundcloud.com/bsgbryan/tracks" class="btn btn-primary" target="_blank">Listen on SoundCloud</a>
-    </div>
-    <div class="card-footer">
-      <small class="text-muted">Music</small>
-    </div>
-  </div>
-  <div class="card">
-    <div class="card-block">
-      <h4 class="card-title">Egghead Anarchy</h4>
-      <hr class="my-2">
-      <p class="card-text">A video game &amp; nerd culture podcast</p>
-      <a href="https://soundcloud.com/egghead-anarchy" class="btn btn-primary" target="_blank">Listen on SoundCloud</a>
-    </div>
-    <div class="card-footer">
-      <small class="text-muted">Podcast</small>
-    </div>
-  </div>
+  {% endfor %}
 </div>

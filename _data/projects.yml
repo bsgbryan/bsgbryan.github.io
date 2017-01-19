@@ -1,0 +1,35 @@
+- name:   Skyll
+  pitch:  A procedural level generator for 2/2.5d platformers
+  href:   https://github.com/bsgbryan/skyll
+  action: View on GitHub
+  type:   Framework
+
+- name:   Modül
+  pitch:  An elegant way to make everything beautifully asynchronous
+  href:   ''
+  action: Coming Soon
+  type:   Library
+
+- name:   Together
+  pitch:  A simple, fun, fully asynchronous api framework - built on Modül
+  href:   ''
+  action: Coming Soon
+  type:   Framework
+
+- name:   Jumpy McRunface
+  pitch:  A fun, zen little infinite platformer for iOS
+  href:   https://itunes.apple.com/us/app/jumpy-mcrunface/id1151471322?mt=8
+  action: View on iTunes
+  type:   Game
+
+- name:   My Music
+  pitch:  Tunes I've made over the years
+  href:   https://soundcloud.com/bsgbryan/tracks
+  action: Listen on SoundCloud
+  type:   Music
+
+- name:   Egghead Anarchy
+  pitch:  A video game &amp; nerd culture podcast
+  href:   https://soundcloud.com/egghead-anarchy
+  action: Listen on SoundCloud
+  type:   Podcast
