@@ -147,16 +147,21 @@ span.btn-primary
     +shadow('text', 1, $heading-shadow-front-color, $heading-shadow-back-color)
     color: $heading-text-color
 
-  p
+  p,
+  li
     color: darken($primary-text-color, 10%)
-
-    a
-      color: $available-link-color
 
     & + h1,
     & + h2,
     & + h3
       margin-top: $base-vertical-whitespace
+
+  abbr[title]
+    text-decoration: none
+    color: darken($primary-text-color, 5%)
+
+  a
+    color: darken($available-link-color, 5%)
 
   .language-sh
     margin-top:    $base-vertical-whitespace
