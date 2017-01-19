@@ -44,6 +44,18 @@ hr.my-2,
   border-top: 1px solid transparentize(rgb(208,208,240), 0.75)
 
 
+.jumbotron h1.display-1,
+#content h1,
+#content h2,
+#content h3,
+.card-deck .card h4.card-title
+  font-family: monospace
+
+.jumbotron .lead,
+#content p,
+#content li
+  font-family: 'Nunito', sans-serif
+
 .jumbotron
   background-color: rgb(255,247,255)
   +shadow('box', 2, $box-shadow-front-color, $box-shadow-back-color)
@@ -62,6 +74,7 @@ hr.my-2,
   text-transform: lowercase
   letter-spacing: $base-letter-spacing
   color: $available-link-color
+  font-family: 'Quicksand', sans-serif
 
   &.active
     color: $unavailable-link-color
@@ -87,6 +100,7 @@ hr.my-2,
 
     p.card-text
       color: $primary-text-color
+      font-family: 'Raleway', sans-serif
 
     h4.card-title
       color: $heading-text-color
@@ -115,6 +129,7 @@ span.btn-primary
   background-color: transparent
   border-color: $button-border-color
   color: $available-link-color
+  font-family: 'Quicksand', sans-serif
 
   &:focus
     box-shadow: none
