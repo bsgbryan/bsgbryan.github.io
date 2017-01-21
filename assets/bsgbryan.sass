@@ -13,6 +13,9 @@ $heading-shadow-back-color:  transparentize($page-shadow-back-color,  0.5)
 $box-shadow-front-color: rgb(255,227,212)
 $box-shadow-back-color:  rgb(255,243,187)
 
+$img-shadow-front-color: rgb(153,204,255)
+$img-shadow-back-color:  rgb(221,238,255)
+
 $available-link-color:   rgb(140,183,221)
 $unavailable-link-color: rgb(174,217,255)
 $button-border-color:    $unavailable-link-color
@@ -35,7 +38,7 @@ $base-syntax-color: rgb(93,93,127)
 img
   margin-top: $base-vertical-whitespace
   margin-bottom: $base-vertical-whitespace
-  +shadow('box', 2, $box-shadow-front-color, $box-shadow-back-color)
+  +shadow('box', 2, $img-shadow-front-color, $img-shadow-back-color)
 
 
 hr.my-4,
