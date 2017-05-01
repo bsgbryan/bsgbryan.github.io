@@ -4,16 +4,16 @@
   action: View on GitHub
   type:   Framework
 
-- name:   Modül
+- name:   Madul
   pitch:  An elegant way to make everything beautifully asynchronous
-  href:   ''
-  action: Coming Soon
+  href:   https://github.com/bsgbryan/madul
+  action: View on GitHub
   type:   Library
 
 - name:   Together
-  pitch:  A simple, fun, fully asynchronous api framework - built on Modül
-  href:   ''
-  action: Coming Soon
+  pitch:  A simple, fun, fully asynchronous api framework - built on Madul
+  href:   https://github.com/bsgbryan/together
+  action: View on GitHub
   type:   Framework
 
 - name:   Jumpy McRunface
