@@ -5,7 +5,7 @@
   type:   Web app
 
 - name:   Wavy McFormface
-  pitch:  An analog synth for Unity in c#
+  pitch:  "An analog synth for Unity in C#"
   href:   https://github.com/bsgbryan/wavy-mcformface
   action: View on GitHub
   type:   Plugin
