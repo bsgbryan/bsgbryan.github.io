@@ -1,3 +1,15 @@
+- name:   Readie
+  pitch:  Your emotional news aggregator
+  href:   https://readie.news
+  action: View on the web
+  type:   Web app
+
+- name:   Wavy McFormface
+  pitch:  An analog synth for Unity in c#
+  href:   https://github.com/bsgbryan/wavy-mcformface
+  action: View on GitHub
+  type:   Plugin
+
 - name:   Skyll
   pitch:  A procedural level generator for 2/2.5d platformers
   href:   https://github.com/bsgbryan/skyll
