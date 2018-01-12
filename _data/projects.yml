@@ -4,15 +4,27 @@
   action: View on the web
   type:   Web app
 
+- name:   Jumpy McRunface
+  pitch:  A fun, zen little infinite platformer for iOS
+  href:   https://itunes.apple.com/us/app/jumpy-mcrunface/id1151471322?mt=8
+  action: View on iTunes
+  type:   Game
+
 - name:   Wavy McFormface
   pitch:  "An analog synth for Unity in C#"
-  href:   https://github.com/bsgbryan/wavy-mcformface
+  href:   https://github.com/MayBGames/wavy-mcformface
   action: View on GitHub
   type:   Plugin
 
+- name:   Babbling On
+  pitch:  A repository detailing my learnings regarding Babylon.js
+  href:   https://github.com/MayBGames/babbling-on
+  action: View on GitHub
+  type:   Repository
+
 - name:   Skyll
   pitch:  A procedural level generator for 2/2.5d platformers
-  href:   https://github.com/bsgbryan/skyll
+  href:   https://github.com/MayBGames/skyll
   action: View on GitHub
   type:   Framework
 
@@ -27,12 +39,6 @@
   href:   https://github.com/bsgbryan/jyn
   action: View on GitHub
   type:   Framework
-
-- name:   Jumpy McRunface
-  pitch:  A fun, zen little infinite platformer for iOS
-  href:   https://itunes.apple.com/us/app/jumpy-mcrunface/id1151471322?mt=8
-  action: View on iTunes
-  type:   Game
 
 - name:   My Music
   pitch:  Tunes I've made over the years

@@ -19,8 +19,8 @@ description: > # this means to ignore newlines until "baseurl:"
   Passioate father, rabid technologist. I love building tools. I love coding.
   I love writing and telling stories. I love making music. Maybe you'll like
   what I do. Maybe something I've done will be of use to you. Who knows? :-)
-baseurl: "" # the subpath of your site, e.g. /blog
-url: "https://bsgbryan.com" # the base hostname & protocol for your site, e.g. http://example.com
+baseurl: "/" # the subpath of your site, e.g. /blog
+url: "http://bsgbryan.com" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: bsgbryan
 github_username:  bsgbryan
 
@@ -28,6 +28,7 @@ github_username:  bsgbryan
 markdown: kramdown
 gems:
   - jekyll-feed
+  - jemoji
 exclude:
   - Gemfile
   - Gemfile.lock
