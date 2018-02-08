@@ -8,8 +8,6 @@ tagline: Ya gotta start somewhere ...
 
 # Hello, World!
 
-- - -
-
 Yeah, this is trite ... but I'm too scared to write anything else right now.
 
 I want to write about my projects, maybe some life stuff, philosophy, etc. But I'm
@@ -19,8 +17,6 @@ writing is: **write**.
 So here we go.
 
 # This site
-
-- - -
 
 This site is a first for me. It's built using [jekyll](https://jekyllrb.com) and
 hosted via [GitHub Pages](https://pages.github.com/). I don't know that I've ever
@@ -54,8 +50,6 @@ In the end, a GitHub Pages site powered by jekyll fits the bill nicely as it:
 ![YESSS](http://www.reactiongifs.us/wp-content/uploads/2013/10/yes_napoleon_dynamite.gif)
 
 # That's all folks!
-
-- - -
 
 Thanks for reading my first post!
 

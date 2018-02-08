@@ -7,8 +7,6 @@ tagline: A brief history of bsgbryan
 
 # In the beginning
 
-- - -
-
 I was born as a young age. Fresh-faced, hopeful, and screaming I came into the
 world with one mission: _eat_. Quickly, my next mission became clear.
 
@@ -24,7 +22,5 @@ getting my Storm Trooper stuck in the basement wall, and having mixed feelings
 about moving.
 
 # More to come ...
-
-- - -
 
 Stay tuned ...
