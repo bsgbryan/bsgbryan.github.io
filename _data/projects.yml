@@ -1,9 +1,3 @@
-- name:   Readie
-  pitch:  Your emotional news aggregator
-  href:   https://readie.news
-  action: View on the web
-  type:   Web app
-
 - name:   Jumpy McRunface
   pitch:  A fun, zen little infinite platformer for iOS
   href:   https://itunes.apple.com/us/app/jumpy-mcrunface/id1151471322?mt=8
