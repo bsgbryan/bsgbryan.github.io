@@ -1,9 +1,7 @@
 ---
 ---
 
-// COLOR THEME:
-// https://color.adobe.com/create/color-wheel/?base=2&rule=Complementary&selected=4&name=My%20Color%20Theme&mode=rgb&rgbvalues=0.4433333333333333,0.44333333333339164,0.7,0.8333333333333333,0.8333333333333712,1,0.7333333333333333,0.7333333333333333,1,0.7,0.6407258064514811,0.37333333333333324,1,0.9516129032256989,0.7333333333333333&swatchOrder=0,1,2,3,4
-
+@import url('https://fonts.googleapis.com/css?family=Nunito|Quicksand|Raleway')
 $page-shadow-front-color: rgb(187, 187, 255)
 $page-shadow-back-color:  rgb(221, 221, 255)
 
@@ -29,6 +27,8 @@ $base-vertical-whitespace: 2rem
 $base-letter-spacing: 1px
 
 $base-syntax-color: rgb(64, 64, 64)
+
+$glow: white
 
 =shadow($mode, $n, $front, $back)
   #{$mode}-shadow: #{$n}px #{$n * 2}px 0 $front, #{$n * 2}px #{$n * 4}px 0 $back
@@ -60,6 +60,7 @@ hr.my-2,
   background-color: transparent
   margin-top: 0
   margin-bottom: 0
+  padding-bottom: 1rem
 
   h1.display-1
     display: flex
@@ -82,18 +83,21 @@ hr.my-2,
     letter-spacing: $base-letter-spacing
     color: $heading-text-color
     text-align: center
-    margin-top: 2vh
+    margin-top: 2rem
 
 .nav
-  margin-bottom: 2rem
+  margin-bottom: 0
+
   .nav-link
     text-transform: lowercase
     letter-spacing: $base-letter-spacing
-    color: $available-link-color
+    color: rgb(187, 183, 145)
     font-family: 'Quicksand', sans-serif
+    padding-top: 0
+    padding-bottom: 0
 
     &.active
-      color: $unavailable-link-color
+      color: rgb(144, 134, 103)
 
 .footer
   &.container
@@ -141,17 +145,16 @@ span.btn-primary
 .btn-primary:active,
 .btn-primary:visited,
   background-color: transparent
-  border-color: $button-border-color
-  color: $available-link-color
+  border-color: rgb(106, 106, 131)
+  color: rgb(106, 106, 131)
   font-family: 'Quicksand', sans-serif
 
   &:focus
     box-shadow: none
 
 .footer a.fa
-  color: $available-link-color
+  color: rgb(106, 106, 131)
   text-shadow: -1px -1px 0 rgba(255, 255, 255, .7), 1px -1px 0 rgba(255, 255, 255, .7), -1px 1px 0 rgba(255, 255, 255, .7), 1px 1px 0 rgba(255, 255, 255, .7), -2px 4px 2px rgba(#a0a0a0, 0.3), -3px 6px 3px rgba(#a0a0a0, 0.2), -4px 8px 4px rgba(#a0a0a0, 0.1)
-
 
 #content
   margin-top: $base-vertical-whitespace + 1rem
@@ -162,10 +165,12 @@ span.btn-primary
 
   h1, h2, h3, h4, h5
     color: $heading-text-color
+    font-family: 'Raleway', sans-serif
+    font-weight: 600
   
   h1
     margin-bottom: 1rem
-    text-shadow: -1px -1px 0 rgb(255, 255, 255), 1px -1px 0 rgb(255, 255, 255), -1px 1px 0 rgb(255, 255, 255), 1px 1px 0 rgb(255, 255, 255)
+    text-shadow: -1px -1px 0 $glow, 1px -1px 0 $glow, -1px 1px 0 $glow, 1px 1px 0 $glow
   
   h3
     margin-left: 0.5rem
@@ -184,9 +189,6 @@ span.btn-primary
   p
     margin-left: 1rem
 
-  li
-    color: rgba(64, 60, 20, 0.9)
-
   abbr[title]
     text-decoration: none
     color: darken($primary-text-color, 5%)
@@ -197,6 +199,8 @@ span.btn-primary
   .language-sh
     margin-top:    $base-vertical-whitespace
     margin-bottom: $base-vertical-whitespace
+    margin-right: calc(-3rem - 1px)
+    margin-left: calc(-3rem - 1px)
 
     .highlight
       padding: 1rem 1.5rem
@@ -206,6 +210,7 @@ span.btn-primary
 
   .language-sh .highlight
     margin-bottom: 0
+    padding: 0.5rem
 
   .language-sh .highlight,
   p > code.highlighter-rouge,
@@ -214,9 +219,40 @@ span.btn-primary
     color: lighten($base-syntax-color, 10%)
     text-shadow: -1px -1px 0 rgba(255, 255, 255, .5), 1px -1px 0 rgba(255, 255, 255, .5), -1px 1px 0 rgba(255, 255, 255, .5), 1px 1px 0 rgba(255, 255, 255, .5)
 
-@media (max-width: 575px)
-  .jumbotron h1.display-1
-    font-size: $base-vertical-whitespace * 2
+  ol, ul
+    padding-left: 1rem
+    ul
+      padding-left: 1rem
+      list-style-type: disc
+
+@media (max-width: 577px)
+  .jumbotron
+    h1.display-1
+      font-size: 3rem
+    
+    p.lead
+      margin-top: 2rem
+    
+  nav.nav-link
+    padding-top: 0
+    padding-bottom: 0
+
+  #content
+    border-radius: 0
+    padding: 2rem 1rem
+    border-top: 1px solid rgb(106, 106, 131)
+
+    a
+      color: rgb(112, 101, 127)
+
+    .language-sh
+      margin-left: -15px
+      margin-right: -15px
+      
+      .highlight
+        padding: 0.5rem 0.25rem
+        margin-bottom: 0
+
 
 @font-face
   font-family: 'CoreCircus'
