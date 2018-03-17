@@ -27,7 +27,7 @@ Sooooo, about the games?
 
 Yeah... it looks like it's going to be a while before I have any updates to show for the new version of Jumpy McRunface. And it'll be a while before I start on Monster Me.
 
-I really want to have something to take to [Pixel Pop](http://pixelpopfestival.com/) this year. I'm thinking I might work on something really small. I'd like to see if I could strip something like SimCity 2000 down to the point that I could have something compelling by July 28th.
+I really want to have something to take to [Pixel Pop](http://pixelpopfestival.com/) this year. I'm thinking I might work on something really small. I'd like to see if I could strip something like [SimCity 2000](https://en.wikipedia.org/wiki/SimCity_2000 "The best SimCity, IMHO") down to the point that I could have something compelling by July 28th.
 
 My thought is that putting all this learning time in now will drastically decrease the time required to build games in the future.
 
