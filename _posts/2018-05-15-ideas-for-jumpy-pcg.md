@@ -17,12 +17,12 @@ Why 3D noise?
 
 3D noise is exactly the same as 2D noise - except that it includes the Z axis. The extra axis allows us to store vastly more information in our map; specifically, (xy)<sup>z</sup>.
 
-Another benfit of 3D noise is: it naturally to the volumetric nature of terrain. 3D noise gives us a simple, intuitive way to express rules and constraints in 3D space.
+Another benfit of 3D noise is: it naturally maps to the volumetric nature of terrain. 3D noise gives us a simple, intuitive way to express rules and constraints in 3D space.
 
 Where did this come from?
 =========================
 
-I've been working with pcg for a while now. I've been using 2D Perlin Noise and 2D masks for generating terrain. While these do work, I'm not happy with the uniform distrobution of vertices along the x and z axes. The low poly look I'm going for requires vertex position variation along the x and z coordinates. Additionally, I want to be able to use different sets of rules to render different materials (rocks, rollung hills, grassy plains, mountains, deserts, etc). While I imagine I could define all the rules and constraints I want using 2D maps, a 3D map seems like a much more natural fit.
+I've been working with pcg for a while now. I've been using 2D Perlin Noise and 2D masks for generating terrain. While these do work, I'm not happy with the uniform distribution of vertices along the x and z axes. The low poly look I'm going for requires vertex position variation along x and z. Additionally, I want to be able to use different sets of rules to render different materials (rocks, rollung hills, grassy plains, mountains, deserts, etc). While I imagine I could define all the rules and constraints I want using 2D maps, a 3D map seems like a much more natural fit.
 
 Unknowns
 ========
