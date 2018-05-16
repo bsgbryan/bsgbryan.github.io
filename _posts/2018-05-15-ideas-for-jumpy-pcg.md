@@ -3,7 +3,7 @@ layout:  post
 title:   Ideas for PCG stuff in the game I'm working on
 date:    2018-05-15 12:00:00 -0600
 hero:    IDEAS[0]
-tagline: Reseaching shaders, noise, and pcg has given me some ideas...
+tagline: Researching shaders, noise, and pcg has given me some ideas...
 categories: game development unity pcg noise
 ---
 
