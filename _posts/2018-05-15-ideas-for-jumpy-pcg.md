@@ -15,7 +15,7 @@ Use 3D noise in addition to 2D noise to generate terrain. 3D noise should work v
 Why 3D noise?
 =============
 
-3D noise is exactly the same as 2D noise - except that it includes the Z axis. The extra axis allows us to store vastly more information in our map; specifically, (xy)<sup>z</sup>.
+3D noise is exactly the same as 2D noise - except that it includes the Z axis. The extra axis allows us to store vastly more information in our map.
 
 Another benfit of 3D noise is: it naturally maps to the volumetric nature of terrain. 3D noise gives us a simple, intuitive way to express rules and constraints in 3D space.
 
