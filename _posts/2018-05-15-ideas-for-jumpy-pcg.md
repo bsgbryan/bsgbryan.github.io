@@ -23,6 +23,7 @@ Where did this come from?
 =========================
 
 I've been working with pcg for a while now. I've been using 2D Perlin Noise and 2D masks for generating terrain. While these do work, I'm not happy with the uniform distribution of vertices along the x and z axes. The low poly look I'm going for requires vertex position variation along x and z.
+
 Additionally, I want to be able to use different sets of rules to render different materials (rocks, rollung hills, grassy plains, mountains, deserts, etc). While I imagine I could define all the rules and constraints I want using 2D maps, a 3D map seems like a much more natural fit.
 
 Unknowns
