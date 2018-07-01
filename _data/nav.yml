@@ -1,3 +1,6 @@
+- title: 'WhoAmI'
+  href:  '/whoami.html'
+
 - title: 'Projects'
   href: '/'
 
@@ -7,5 +10,5 @@
 - title: 'Posts'
   href: '/posts.html'
 
-# - title: 'Resume'
-#   href: '/cv.html'
+- title: 'MinTuts'
+  href: '/MinTuts.html'

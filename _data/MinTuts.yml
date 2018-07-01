@@ -1,0 +1,23 @@
+- title:   Procedural Generation 0
+  pitch:   We procedurally build quad meshes, use quads to build a terrain of a specified size, and build a custom editor for our terrain
+  href:    "/MinTuts/procedural-terrain-0.html"
+  youtube: "https://youtu.be/4zOF7qWHFXc"
+  tags:    "mintut, tutorial, procedural generation, C#"
+
+- title:   Procedural Generation 1
+  pitch:   We implement multi-octave Perlin Noise
+  href:    "/MinTuts/procedural-terrain-1.html"
+  youtube: "https://youtu.be/7q3sdVX17yQ"
+  tags:    "mintut, tutorial, procedural generation, C#"
+
+- title:   Procedural Generation 2
+  pitch:   We add a falloff map to our terrain and implement an auto update option
+  href:    "/MinTuts/procedural-terrain-2.html"
+  youtube: "https://youtu.be/BXK3KmxhLCo"
+  tags:    "mintut, tutorial, procedural generation, C#"
+
+- title:   Procedural Generation 3
+  pitch:   We build a custom shader. We start simple with a greyscale shader - then add grass, water, and a shoreline
+  href:    "/MinTuts/procedural-terrain-3.html"
+  youtube: "https://youtu.be/xaAWBz9RtEo"
+  tags:    "mintut, tutorial, procedural generation, Cg, HLSL, vertex/fragment, shader"

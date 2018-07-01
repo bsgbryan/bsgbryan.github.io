@@ -179,15 +179,23 @@ span.btn-primary
   // text-shadow: -1px -1px 0 rgba(255, 255, 255, .7), 1px -1px 0 rgba(255, 255, 255, .7), -1px 1px 0 rgba(255, 255, 255, .7), 1px 1px 0 rgba(255, 255, 255, .7), -2px 4px 2px rgba(#a0a0a0, 0.3), -3px 6px 3px rgba(#a0a0a0, 0.2), -4px 8px 4px rgba(#a0a0a0, 0.1)
   text-shadow: -2px 2px 1px rgba(black, $very-transparent)
 
-#content
+#content, #instructions
   margin-top: $base-vertical-whitespace + 1rem
   padding: $base-vertical-whitespace + 1rem
   border-radius: 0.25rem
-  background-color: rgba($glow-color, 0.2)
   margin-top: $base-vertical-whitespace + 1rem
   border: none
 
-  box-shadow: $box-glow
+  &.mintut.col-md-9
+    padding:    0
+    width:   1024px
+    height:   768px
+    
+    iframe
+      width:  100%
+      height: 100%
+      border: none
+      border-radius: 0.25rem
 
   h1, h2, h3, h4, h5
     color: $heading-text-color + rgb(80, 80, 80)
@@ -314,6 +322,10 @@ span.btn-primary
 
       a
         color: #bbb791
+
+#content
+  background-color: rgba($glow-color, 0.2)
+  box-shadow: $box-glow
 
 @media (max-width: 577px)
   .jumbotron

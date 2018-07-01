@@ -1,0 +1,26 @@
+---
+layout:  default
+hero:    MinTuts
+tagline: Tutorials/references packed with awesome info
+title:   MinTuts
+---
+<div class="card-deck row">
+  {% for tut in site.data.MinTuts %}
+    <div class="col-sm-6 col-lg-4">
+      <div class="card">
+        <div class="card-block">
+        <h4 class="card-title">{{ tut.title }}</h4>
+        <hr class="my-2">
+        <p class="card-text">{{ tut.pitch }}</p>
+        <a href="{{ tut.href }}" class="btn btn-primary" target="_blank">Read</a>
+        <a href="{{ tut.youtube }}" class="btn btn-primary" target="_blank">Watch on YouTube</a>
+        </div>
+        <div class="card-footer">
+        {% for tag in tut.tags %}
+          <small class="text-muted">{{ tag }}</small>
+        {% endfor %}
+        </div>
+      </div>
+    </div>
+  {% endfor %}
+</div>
