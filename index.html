@@ -9,7 +9,7 @@ type:    home
   {% for project in site.data.projects %}
     <div class="col-sm-6 col-lg-4">
       <div class="card">
-        <div class="card-block">
+        <div class="card-body">
           <h4 class="card-title">{{ project.name }}</h4>
           <p class="card-text">{{ project.pitch }}</p>
           <a href="{{ project.href }}" class="btn btn-primary" target="_blank">{{ project.action }}</a>
