@@ -1,0 +1,32 @@
+@mixin glow($type, $color, $distance: 2px, $opacity: 1, $radius: 1px) {
+  $pos:   $radius;
+  $neg: -($radius);
+
+  @if $type == text {
+    text-shadow: $neg $neg $distance rgba($color, $opacity),
+                 $pos $neg $distance rgba($color, $opacity),
+                 $neg $pos $distance rgba($color, $opacity),
+                 $pos $pos $distance rgba($color, $opacity);
+  }
+
+  @if $type == border {
+    box-shadow: $neg $neg $distance rgba($color, $opacity),
+                $pos $neg $distance rgba($color, $opacity),
+                $neg $pos $distance rgba($color, $opacity),
+                $pos $pos $distance rgba($color, $opacity),
+          inset -1px -1px 4px       rgba($color, $opacity),
+          inset  1px -1px 4px       rgba($color, $opacity),
+          inset -1px  1px 4px       rgba($color, $opacity),
+          inset  1px  1px 4px       rgba($color, $opacity);
+  }
+}
+
+@function shade($color, $mode, $amount: 30%) {
+  @if $mode == lighten {
+    @return lighten($color, $amount);
+  } @else if $mode == darken {
+    @return darken($color, $amount);
+  }
+  
+  @return $color;
+}

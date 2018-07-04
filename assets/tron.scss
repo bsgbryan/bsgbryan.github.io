@@ -2,122 +2,36 @@
 ---
 
 @import url("https://fonts.googleapis.com/css?family=Orbitron");
-
-$page-shadow-front-color: rgb(187, 187, 255);
-$page-shadow-back-color:  rgb(221, 221, 255);
-
-$heading-shadow-front-color: transparentize($page-shadow-front-color, 0.5);
-$heading-shadow-back-color:  transparentize($page-shadow-back-color,  0.5);
-
-$box-shadow-front-color: rgb(255,227,212);
-$box-shadow-back-color:  rgb(255,243,187);
-
-$img-shadow-front-color: rgb(153, 204, 255);
-$img-shadow-back-color:  rgb(221, 238, 255);
-
-$available-link-color:   rgb(91,   89,  63);
-$unavailable-link-color: rgb(144, 140, 103);
-$button-border-color:    $unavailable-link-color;
-$resume-city-color:      rgb(63, 89, 63);
-
-$primary-text-color: rgb( 18,  18, 45);
-$heading-text-color: rgb( 47,  47, 64);
-$lead-text-color:    rgb(178, 163, 95);
+@import '/Users/fo/Code/bsgbryan.github.io/assets/helpers';
 
 $base-vertical-whitespace: 2rem;
-
-$base-letter-spacing: 1px;
-
-$base-syntax-color: rgb(64, 64, 64);
-
-$slightly-transparent: .7;
-$very-transparent:     .2;
+$base-letter-spacing:      1px;
 
 $orange:       #DF740C;
 $sweet-yellow: #FFE64D;
 $pane:         #E6FFFF;
 $cyan:         #6FC3DF;
 $basestar:     #0C141F;
+$pink:         #E83E8C;
 
-$orange-text-glow: -1px -1px 4px rgba($orange, $slightly-transparent),
-                    1px -1px 4px rgba($orange, $slightly-transparent),
-                   -1px  1px 4px rgba($orange, $slightly-transparent),
-                    1px  1px 4px rgba($orange, $slightly-transparent);
+$light-orange:       shade($orange,       lighten, 30%);
+$light-sweet-yellow: shade($sweet-yellow, lighten, 30%);
+$light-cyan:         shade($cyan,         lighten, 30%);
+$light-basestar:     shade($basestar,     lighten, 30%);
+$light-pink:         shade($pink,         lighten, 30%);
 
-$sweet-yellow-text-glow: -1px -1px 4px rgba($sweet-yellow, $slightly-transparent),
-                          1px -1px 4px rgba($sweet-yellow, $slightly-transparent),
-                         -1px  1px 4px rgba($sweet-yellow, $slightly-transparent),
-                          1px  1px 4px rgba($sweet-yellow, $slightly-transparent);
-
-$pane-text-glow: -1px -1px 4px rgba($pane, $slightly-transparent),
-                  1px -1px 4px rgba($pane, $slightly-transparent),
-                 -1px  1px 4px rgba($pane, $slightly-transparent),
-                  1px  1px 4px rgba($pane, $slightly-transparent);
-
-$cyan-text-glow: -1px -1px 4px rgba($cyan, $slightly-transparent),
-                  1px -1px 4px rgba($cyan, $slightly-transparent),
-                 -1px  1px 4px rgba($cyan, $slightly-transparent),
-                  1px  1px 4px rgba($cyan, $slightly-transparent);
-
-$basestar-text-glow: -1px -1px 4px rgba($basestar, $slightly-transparent),
-                      1px -1px 4px rgba($basestar, $slightly-transparent),
-                     -1px  1px 4px rgba($basestar, $slightly-transparent),
-                      1px  1px 4px rgba($basestar, $slightly-transparent);
-
-$orange-box-glow: -1px -1px 4px rgba($orange, $slightly-transparent),
-                   1px -1px 4px rgba($orange, $slightly-transparent),
-                  -1px  1px 4px rgba($orange, $slightly-transparent),
-                   1px  1px 4px rgba($orange, $slightly-transparent),
-            inset -1px -1px 4px rgba($orange, $slightly-transparent),
-            inset  1px -1px 4px rgba($orange, $slightly-transparent),
-            inset -1px  1px 4px rgba($orange, $slightly-transparent),
-            inset  1px  1px 4px rgba($orange, $slightly-transparent);
-
-$sweet-yellow-box-glow: -1px -1px 4px rgba($sweet-yellow, $slightly-transparent),
-                         1px -1px 4px rgba($sweet-yellow, $slightly-transparent),
-                        -1px  1px 4px rgba($sweet-yellow, $slightly-transparent),
-                         1px  1px 4px rgba($sweet-yellow, $slightly-transparent),
-                  inset -1px -1px 4px rgba($sweet-yellow, $slightly-transparent),
-                  inset  1px -1px 4px rgba($sweet-yellow, $slightly-transparent),
-                  inset -1px  1px 4px rgba($sweet-yellow, $slightly-transparent),
-                  inset  1px  1px 4px rgba($sweet-yellow, $slightly-transparent);
-
-$pane-box-glow: -1px -1px 4px rgba($pane, $slightly-transparent),
-                 1px -1px 4px rgba($pane, $slightly-transparent),
-                -1px  1px 4px rgba($pane, $slightly-transparent),
-                 1px  1px 4px rgba($pane, $slightly-transparent),
-          inset -1px -1px 4px rgba($pane, $slightly-transparent),
-          inset  1px -1px 4px rgba($pane, $slightly-transparent),
-          inset -1px  1px 4px rgba($pane, $slightly-transparent),
-          inset  1px  1px 4px rgba($pane, $slightly-transparent);
-
-$cyan-box-glow: -1px -1px 4px rgba($cyan, $slightly-transparent),
-                 1px -1px 4px rgba($cyan, $slightly-transparent),
-                -1px  1px 4px rgba($cyan, $slightly-transparent),
-                 1px  1px 4px rgba($cyan, $slightly-transparent),
-          inset -1px -1px 4px rgba($cyan, $slightly-transparent),
-          inset  1px -1px 4px rgba($cyan, $slightly-transparent),
-          inset -1px  1px 4px rgba($cyan, $slightly-transparent),
-          inset  1px  1px 4px rgba($cyan, $slightly-transparent);
-
-$basestar-box-glow: -1px -1px 4px rgba($basestar, $slightly-transparent),
-                     1px -1px 4px rgba($basestar, $slightly-transparent),
-                    -1px  1px 4px rgba($basestar, $slightly-transparent),
-                     1px  1px 4px rgba($basestar, $slightly-transparent),
-              inset -1px -1px 4px rgba($basestar, $slightly-transparent),
-              inset  1px -1px 4px rgba($basestar, $slightly-transparent),
-              inset -1px  1px 4px rgba($basestar, $slightly-transparent),
-              inset  1px  1px 4px rgba($basestar, $slightly-transparent);
+$dark-sweet-yellow: shade($sweet-yellow, darken, 30%);
+$dark-pink:         shade($pink,         darken, 30%);
 
 body {
   background-color: black;
 }
 
 img:not(.emoji) {
-  margin-top: $base-vertical-whitespace;
+  margin-top:    $base-vertical-whitespace;
   margin-bottom: $base-vertical-whitespace;
-  border-radius: 0.25rem;
-  box-shadow: $cyan-text-glow;
+  border-radius:  0.25rem;
+  @include        glow('border', $cyan, 4px, 0.7);
 }
 
 hr.my-4,
@@ -155,25 +69,25 @@ hr.my-2,
     font-family:         TR2N, sans-serif;
     text-transform:      uppercase;
     text-align:          center;
-    line-height:         1;
-    font-size:           10vw;
-    margin:              0;
+    line-height:           1;
+    margin:                0;
+    font-size:            10vw;
     width:               100%;
     height:              100%;
     transform:           translateZ(0);
     backface-visibility: hidden;
-    color:               lighten($cyan, 20%);
-    text-shadow:        $cyan-text-glow;
+    color:              $light-cyan;
+    @include             glow('text', $cyan, 8px);
   }
 
   p.lead {
     letter-spacing: $base-letter-spacing;
-    color:          lighten($basestar, 30%);
-    text-align:     center;
-    font-family:    monospace;
-    margin-top:     2rem;
-    margin-bottom:  2rem;
-    font-size:      1.75rem;
+    color:          $light-basestar;
+    text-align:      center;
+    font-family:     monospace;
+    margin-top:      2rem;
+    margin-bottom:   2rem;
+    font-size:       1.75rem;
   }
 }
 
@@ -183,7 +97,7 @@ hr.my-2,
   .nav-link {
     text-transform:           lowercase;
     letter-spacing:          $base-letter-spacing;
-    color:                    darken($sweet-yellow, 10%);
+    color:                   $sweet-yellow;
     font-family: Decovar,     sans-serif;
     font-variation-settings: 'SKLA' 1000, 'TRMK' 1000, 'TRMA' 1000, 'TRMD' 1000;
     padding-top:              0;
@@ -191,14 +105,11 @@ hr.my-2,
     font-size:                1.75rem;
     font-weight:            900;
 
-    text-shadow: -1px -1px 1px darken($sweet-yellow, 30%),
-                 -1px  1px 1px darken($sweet-yellow, 30%),
-                  1px -1px 1px darken($sweet-yellow, 30%),
-                  1px  1px 1px darken($sweet-yellow, 30%);
+    @include glow('text', $dark-sweet-yellow, 1px);
 
     &.active {
       font-weight: 900;
-      color:       lighten($sweet-yellow, 30%);
+      color:       $light-sweet-yellow;
     }
   }
 }
@@ -221,20 +132,20 @@ hr.my-2,
   .card {
     background-color: $basestar;
     margin-top:       $base-vertical-whitespace + 1rem;
-    border:           none;
+    border:            1px solid $light-cyan;
 
-    box-shadow: $cyan-box-glow;
+    @include glow('border', $cyan, 4px);
 
     p.card-text {
       color:       $pane;
-      font-family: monospace;
-      font-size:   1.25rem;
+      font-family:  monospace;
+      font-size:    1.25rem;
     }
 
     h4.card-title {
       color:       $pane;
-      text-shadow: $pane-text-glow;
-      font-family: TR2N;
+      @include      glow('text', $pane, 4px);
+      font-family:  TR2N;
     }
   }
 
@@ -246,20 +157,13 @@ hr.my-2,
       color:        black !important;
       text-transform: lowercase;
       font-weight:    900;
-      text-shadow: -1px  1px 1px lighten($basestar, 25%),
-                   -1px -1px 1px lighten($basestar, 25%),
-                    1px -1px 1px lighten($basestar, 25%),
-                    1px  1px 1px lighten($basestar, 25%);
+      @include        glow(text, lighten($basestar, 25%), 1px);
     }
   }
 }
 
-span.btn-primary {
-  color: $unavailable-link-color;
-
-  &:hover {
-    cursor: default;
-  }
+span.btn-primary:hover {
+  cursor: default;
 }
 
 .btn-primary,
@@ -267,10 +171,10 @@ span.btn-primary {
 .btn-primary:active,
 .btn-primary:visited {
   background-color: rgba($orange, 0.2);
-  border-color:     lighten($orange, 30%);
+  border-color:    $light-orange;
   color:           $orange;
   font-family:      Decovar;
-  box-shadow:      $orange-box-glow;
+  @include          glow('border', $orange, 4px, 0.7);
 
   &:focus {
     box-shadow: none;
@@ -278,8 +182,7 @@ span.btn-primary {
 }
 
 .footer a.fa {
-  color:      rgb(106, 106, 131);
-  text-shadow: -2px 2px 1px rgba(black, $very-transparent);
+  color: $light-basestar;
 }
 
 #content,
@@ -305,7 +208,7 @@ span.btn-primary {
 
   h1, h2, h3, h4, h5 {
     color:       lighten($pane, 10%);
-    text-shadow: $pane-text-glow;
+    @include     glow('text', $pane, 4px, 0.7);
     font-family: TR2N;
     font-weight: 600;
   }
@@ -320,18 +223,18 @@ span.btn-primary {
 
     &#experience ~ h2 strong {
       font-family: monospace;
-      font-size:   2rem;
-      color:       lighten($cyan, 20%);
+      color:       $light-cyan;
+      font-size:     2rem;
+      font-weight: 100;
 
-      text-shadow: -1px -1px 4px $cyan,
-                   -1px  1px 4px $cyan,
-                    1px -1px 4px $cyan,
-                    1px  1px 4px $cyan;
+      @include glow(text, $cyan, 4px);
     }
 
     &#personal-projects ~ h2 {
+
       strong {
         font-family: Decovar;
+        font-weight: 600;
       }
 
       code {
@@ -363,20 +266,13 @@ span.btn-primary {
       strong {
         margin-top: 1.5rem;
         display:    inline-block;
-
-        & + code {
-          color: lighten(#2f2f40, 35%);
-        }
       }
     }
 
     code {
       font-family: TR2N;
       background-color: transparent;
-      text-shadow: -1px -1px 1px darken(#e83e8c, 30%),
-                   -1px  1px 1px darken(#e83e8c, 30%),
-                    1px -1px 1px darken(#e83e8c, 30%),
-                    1px  1px 1px darken(#e83e8c, 30%);
+      @include glow(text, $dark-pink, 1px);
     }
 
     strong {
@@ -388,9 +284,11 @@ span.btn-primary {
   h3 {
     margin-left: 0.5rem;
 
-    & + ul
-      > li {
-        margin: 0.5rem 0;
+    & + ul > li {
+      margin:      0.5rem 0;
+      font-size:   1.25rem;
+      font-family: monospace;
+
       ul {
         list-style-type: circle;
 
@@ -436,15 +334,11 @@ span.btn-primary {
   .language-sh {
     margin-top:    $base-vertical-whitespace;
     margin-bottom: $base-vertical-whitespace;
-    margin-right: calc(-3rem - 1px);
-    margin-left: calc(-3rem - 1px);
+    margin-right:   calc(-3rem - 1px);
+    margin-left:    calc(-3rem - 1px);
 
     .highlight {
-      padding: 1rem 1.5rem;;
-
-      .gp {
-        color: lighten($base-syntax-color, 30%);
-      }
+      padding: 1rem 1.5rem;
     }
   }
 
@@ -460,9 +354,9 @@ span.btn-primary {
   .language-sh .highlight,
   p > code.highlighter-rouge,
   li > code.highlighter-rouge {
-    color:            #8080a2;
-    background-color: $basestar;
-    border: $pane-text-glow;
+    color:            $light-pink;
+    background-color: transparent;
+    @include          glow('text', $pink);
 
     .highlight {
       border: none;
@@ -502,7 +396,7 @@ span.btn-primary {
 
 #content {
   background-color: rgba($cyan, 0.2);
-  box-shadow: $pane-box-glow;
+  @include          glow('border', $pane, 4px, 0.7);
 }
 
 
