@@ -166,7 +166,7 @@ span.btn-primary
 .btn-primary:visited,
   background-color: transparent
   border-color: rgb(106, 106, 131) + rgb(30, 30, 30)
-  color:        rgb(106, 106, 131) + rgb(30, 30, 30)
+  color:        rgb(106, 106, 131) + rgb(30, 30, 30) !important
   font-family:  'Quicksand', sans-serif
   text-shadow:  -2px 2px 1px rgba(black, $very-transparent)
   box-shadow:   $transparent-tower
@@ -174,7 +174,7 @@ span.btn-primary
   &:focus
     box-shadow: none
 
-.footer a.fa
+.footer a.fab
   color: rgb(106, 106, 131)
   // text-shadow: -1px -1px 0 rgba(255, 255, 255, .7), 1px -1px 0 rgba(255, 255, 255, .7), -1px 1px 0 rgba(255, 255, 255, .7), 1px 1px 0 rgba(255, 255, 255, .7), -2px 4px 2px rgba(#a0a0a0, 0.3), -3px 6px 3px rgba(#a0a0a0, 0.2), -4px 8px 4px rgba(#a0a0a0, 0.1)
   text-shadow: -2px 2px 1px rgba(black, $very-transparent)
@@ -326,6 +326,15 @@ span.btn-primary
 #content
   background-color: rgba($glow-color, 0.2)
   box-shadow: $box-glow
+
+#themes
+  margin-bottom: 3rem
+
+  .btn.btn-primary
+    margin:           0.5rem
+    background-color: rgba($glow-color, 0.2)
+    box-shadow:       $transparent-tower
+
 
 @media (max-width: 577px)
   .jumbotron

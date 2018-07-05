@@ -117,11 +117,15 @@ hr.my-2,
 .footer {
 
   &.container {
-    margin-top: $base-vertical-whitespace * 2;
-    margin-bottom: $base-vertical-whitespace;
+    margin-top:    $base-vertical-whitespace + 1rem;
+    margin-bottom: $base-vertical-whitespace + 0.5rem;
   }
 
-  .fa:hover {
+  a.fab {
+    color: $light-basestar;
+  }
+
+  .fab:hover {
     text-decoration: none;
   }
 }
@@ -172,17 +176,13 @@ span.btn-primary:hover {
 .btn-primary:visited {
   background-color: rgba($orange, 0.2);
   border-color:    $light-orange;
-  color:           $orange;
+  color:           $orange !important;
   font-family:      Decovar;
   @include          glow('border', $orange, 4px, 0.7);
 
   &:focus {
     box-shadow: none;
   }
-}
-
-.footer a.fa {
-  color: $light-basestar;
 }
 
 #content,
@@ -399,6 +399,13 @@ span.btn-primary:hover {
   @include          glow('border', $pane, 4px, 0.7);
 }
 
+#themes {
+  margin-bottom: 3rem;
+  
+  .btn.btn-primary {
+    margin: 0.5rem;
+  }
+}
 
 @media (max-width: 577px) {
   .jumbotron {

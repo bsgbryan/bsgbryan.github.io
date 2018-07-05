@@ -146,13 +146,13 @@ span.btn-primary
 .btn-primary:visited,
   background-color: transparent
   border-color: rgb(106, 106, 131)
-  color: rgb(106, 106, 131)
+  color: rgb(106, 106, 131) !important
   font-family: 'Quicksand', sans-serif
 
   &:focus
     box-shadow: none
 
-.footer a.fa
+.footer a.fab
   color: rgb(106, 106, 131)
   text-shadow: -1px -1px 0 rgba(255, 255, 255, .7), 1px -1px 0 rgba(255, 255, 255, .7), -1px 1px 0 rgba(255, 255, 255, .7), 1px 1px 0 rgba(255, 255, 255, .7), -2px 4px 2px rgba(#a0a0a0, 0.3), -3px 6px 3px rgba(#a0a0a0, 0.2), -4px 8px 4px rgba(#a0a0a0, 0.1)
 
@@ -281,7 +281,7 @@ span.btn-primary
       a
         color: #bbb791
 
-  @media (max-width: 577px)
+@media (max-width: 577px)
   .jumbotron
     h1.display-1
       font-size: 3rem
@@ -308,6 +308,12 @@ span.btn-primary
       .highlight
         padding: 0.5rem 0.25rem
         margin-bottom: 0
+
+#themes 
+  margin-bottom: 3rem
+
+  .btn.btn-primary
+    margin: 0.5rem
 
 
 @font-face
