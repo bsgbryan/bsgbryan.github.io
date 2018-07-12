@@ -102,6 +102,41 @@ div.bigBlackSquare
   }
 }
 
+@media (max-device-width: 375px) {
+    #stageArea,
+    #stageArea > #stage > div {
+      top:  0 !important;
+      left: 0 !important;
+    }
+  
+    div.bigBlackSquare,
+    #stageArea,
+    #stageArea > #stage div,
+    #stageArea > #stage > div > div > div > canvas {
+      width: 375px !important;
+      height: 281.25px !important;
+    }
+  
+    #body > #previousButton,
+    #body > #nextButton {
+      top: 279px !important;
+    }
+  
+    #body > #nextButton {
+      left: 282px !important;
+    }
+  
+    #body > #slideCounter {
+      top: 282px !important;
+      left: 118px !important;
+    }
+  
+    #body > #helpText {
+      top: 353px !important;
+      width: 100% !important;
+    }
+  }
+
 @media (max-device-width: 320px) {
   #stageArea,
   #stageArea > #stage > div {

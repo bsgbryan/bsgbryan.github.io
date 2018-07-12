@@ -28,10 +28,43 @@ div.bigBlackSquare
     position: absolute; 
     top: 0px;
     left: 0px;
-    width: 1024px;
-    height: 1024px;
     visibility: hidden;
     background-color: black;
+}
+
+@media (min-width: 1024px) {
+  div.bigBlackSquare {
+    width: 1024px;
+    height: 1024px;
+  }
+}
+
+@media (max-width: 1023px) {
+  div.bigBlackSquare {
+    width: 500px;
+    height: 500px;
+  }
+}
+
+@media (max-width: 414px) {
+  div.bigBlackSquare {
+    width: 414px;
+    height: 414px;
+  }
+}
+
+@media (max-width: 411px) {
+  div.bigBlackSquare {
+    width: 411px;
+    height: 411px;
+  }
+}
+
+@media (max-width: 320px) {
+  div.bigBlackSquare {
+    width: 320px;
+    height: 320px;
+  }
 }
 
 /* Debug Status Display */
