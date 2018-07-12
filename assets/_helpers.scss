@@ -1,6 +1,3 @@
----
----
-
 @mixin glow($type, $color, $distance: 2px, $opacity: 1, $radius: 1px) {
   $pos:   $radius;
   $neg: -($radius);
