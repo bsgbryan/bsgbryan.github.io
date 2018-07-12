@@ -1,0 +1,285 @@
+---
+---
+
+$base-vertical-whitespace: 2rem;
+$base-letter-spacing:      1px;
+
+html,
+body {
+  overflow-x: hidden;
+}
+
+img:not(.emoji) {
+  margin-top:    $base-vertical-whitespace;
+  margin-bottom: $base-vertical-whitespace;
+  border-radius:  0.25rem;
+}
+
+.jumbotron {
+  background-color: transparent;
+  margin-top:       0;
+  margin-bottom:    0;
+  padding-bottom:   1rem;
+
+  h1.display-1 {
+    display:             flex;
+    align-items:         center;
+    justify-content:     center;
+    text-transform:      uppercase;
+    text-align:          center;
+    line-height:           1;
+    margin:                0;
+    font-size:            10vw;
+    width:               100%;
+    height:              100%;
+    transform:           translateZ(0);
+    backface-visibility: hidden;
+  }
+
+  p.lead {
+    letter-spacing: $base-letter-spacing;
+    text-align:      center;
+    margin-top:      2rem;
+    margin-bottom:   2rem;
+    font-size:       1.75rem;
+  }
+}
+
+.nav {
+  margin-bottom: 0;
+
+  .nav-link {
+    text-transform:  lowercase;
+    letter-spacing: $base-letter-spacing;
+    padding-top:       0;
+    padding-bottom:    0;
+    font-size:         1.75rem;
+    font-weight:     900;
+  }
+}
+
+.footer {
+
+  &.container {
+    margin-top:    $base-vertical-whitespace + 1rem;
+    margin-bottom: $base-vertical-whitespace + 0.5rem;
+  }
+
+  .fab:hover {
+    text-decoration: none;
+  }
+}
+
+.card-deck {
+  margin-bottom: $base-vertical-whitespace;
+
+  .card {
+    margin-top: $base-vertical-whitespace + 1rem;
+
+    p.card-text {
+      font-size: 1.25rem;
+    }
+  }
+
+  .card-footer {
+    border-top:       none;
+    background-color: rgba(black, 0.15);
+
+    small.text-muted {
+      text-transform: lowercase;
+      font-weight:    900;
+    }
+  }
+}
+
+span.btn-primary:hover {
+  cursor: default;
+}
+
+#content,
+#instructions {
+  margin-top:    $base-vertical-whitespace + 1rem;
+  padding:       $base-vertical-whitespace + 1rem;
+  border-radius: 0.25rem;
+  margin-top:    $base-vertical-whitespace + 1rem;
+  border:        none;
+
+  h1, h2, h3, h4, h5 {
+    font-weight: 600;
+  }
+  
+  h1 {
+    margin-bottom: 1rem;
+
+    & + h2 strong {
+      margin-top:  0;
+    }
+
+    &#experience ~ h2 strong {
+      font-size:     2rem;
+      font-weight: 100;
+    }
+
+    &#personal-projects ~ h2 {
+
+      strong {
+        font-weight: 600;
+      }
+
+      code {
+        vertical-align: middle;
+      }
+    }
+
+  }
+
+  h2 {
+    & > * {
+      font-size: 1.5rem;
+    }
+
+    & + h3 {
+      margin-left:   1rem;
+      margin-bottom:  .75rem;
+      text-shadow:   none;
+      font-size:     1.25rem;
+
+      em {
+        font-style: normal;
+      }
+
+      strong {
+        margin-top: 1.5rem;
+        display:    inline-block;
+      }
+    }
+
+    code {
+      background-color: transparent;
+    }
+  }
+
+  h3 {
+    margin-left: 0.5rem;
+
+    & + ul > li {
+      margin:      0.5rem 0;
+      font-size:   1.25rem;
+
+      ul {
+        list-style-type: circle;
+
+        li {
+          font-size: 1rem;
+        }
+      }
+    }
+  }
+
+  em {
+    font-style: oblique;
+  }
+
+  p,
+  li,
+  table {
+
+    & + h1,
+    & + h2,
+    & + h3,
+    & + h4,
+    & + h5 {
+      margin-top: $base-vertical-whitespace;
+    }
+  }
+
+  p {
+    margin-left: 1rem;
+  }
+
+  abbr[title] {
+    text-decoration: none;
+  }
+
+  .language-sh {
+    margin-top:    $base-vertical-whitespace;
+    margin-bottom: $base-vertical-whitespace;
+    margin-right:   calc(-3rem - 1px);
+    margin-left:    calc(-3rem - 1px);
+
+    .highlight {
+      padding: 1rem 1.5rem;
+    }
+  }
+
+  .language-sh .highlight {
+    margin-bottom: 0;
+    padding:       0.5rem;
+  }
+
+  ol, ul {
+    padding-left: 1rem;
+
+    ul {
+      padding-left: 1rem;
+      list-style-type: disc;
+    }
+    
+    & + h1 {
+      margin-top: 4rem;
+    }
+  }
+  
+  #tools + table,
+  #languages + table {
+    width: 100%;
+    margin-left: 1rem;
+
+    td {
+      width: 20%;
+      font-size: 1rem;
+    }
+  }
+}
+
+#themes {
+  margin-bottom: 3rem;
+  
+  .btn.btn-primary {
+    margin: 0.5rem;
+  }
+}
+
+
+
+@media (max-width: 577px) {
+  .jumbotron {
+    h1.display-1 {
+      font-size: 3rem;
+    }
+    
+    p.lead {
+      margin-top: 2rem;
+    }
+  }
+    
+  nav.nav-link {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+
+  #content {
+    border-radius: 0;
+    padding: 2rem 1rem;
+
+    .language-sh {
+      margin-left:  -15px;
+      margin-right: -15px;
+      
+      .highlight {
+        padding: 0.5rem 0.25rem;
+        margin-bottom: 0;
+      }
+    }
+  }
+}
