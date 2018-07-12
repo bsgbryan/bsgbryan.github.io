@@ -17,3 +17,8 @@
   pitch:   We build a custom shader. We start simple with a greyscale shader - then add grass, water, and a shoreline
   href:    /MinTuts/procedural-terrain-3.html
   tags:    mintut, tutorial, procedural generation, Cg, HLSL, vertex/fragment, shader
+
+- title:   Procedural Generation 4
+  pitch:   Make our shader more flexible by exposing its hard-coded values as editable parameters
+  href:    /MinTuts/procedural-terrain-4.html
+  tags:    mintut, tutorial, procedural generation, Cg, HLSL, vertex/fragment, shader, properties
