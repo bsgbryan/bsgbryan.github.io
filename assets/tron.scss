@@ -227,19 +227,6 @@ span.btn-primary:hover {
   margin-top:    $base-vertical-whitespace + 1rem;
   border:        none;
 
-  &.mintut.col-md-9 {
-    padding:    0;
-    width:   1024px;
-    height:   768px;
-    
-    iframe {
-      width:  100%;
-      height: 100%;
-      border: none;
-      border-radius: 0.25rem;
-    }
-  }
-
   h1, h2, h3, h4, h5 {
     color:       lighten($pane, 10%);
     @include     glow('text', $pane, 4px, 0.7);
@@ -478,6 +465,7 @@ span.btn-primary:hover {
   }
 }
 
+@import url('/assets/slideshow.css');
 
 @font-face { // TR2N
   font-family: 'TR2N';
