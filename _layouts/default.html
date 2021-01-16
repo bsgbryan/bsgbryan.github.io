@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="/assets/tron.css"  title="tron" >
   </head>
   <body>
+    <canvas id="webgl" style="position: fixed; width: 100%; height: 100%;"></canvas>
     <div class="container">
       {% include jumbotron.html %}
     </div>
@@ -134,7 +135,10 @@
 
       ga('create', 'UA-90582662-1', 'auto');
       ga('send', 'pageview');
-
     </script>
+    <script src="assets/webgl/m4.js"></script>
+    <script src="assets/webgl/boilerplate.js"></script>
+    <script src="assets/webgl/drawScene.js"></script>
+    <script src="assets/webgl/main.js"></script>
   </body>
 </html>
