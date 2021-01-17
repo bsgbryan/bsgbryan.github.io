@@ -1,5 +1,5 @@
 
-const vertices = new Float32Array([
+const unitCube = new Float32Array([
   // Front
   0, 0, 0,
   0, 0, 1,
@@ -44,43 +44,45 @@ const vertices = new Float32Array([
   0, 1, 0,
 ])
 
+const vertices = unitCube
+
 const colors = new Uint8Array([
-  // Front
-  42, 42, 42,
-  42, 42, 42,
-  42, 42, 42,
-  42, 42, 42,
-  42, 42, 42,
-  42, 42, 42,
-  // Right
-  84, 84, 84,
-  84, 84, 84,
-  84, 84, 84,
-  84, 84, 84,
-  84, 84, 84,
-  84, 84, 84,
-  // Back
-  126, 126, 126,
-  126, 126, 126,
-  126, 126, 126,
-  126, 126, 126,
-  126, 126, 126,
-  126, 126, 126,
-  // Left
-  168, 168, 168,
-  168, 168, 168,
-  168, 168, 168,
-  168, 168, 168,
-  168, 168, 168,
-  168, 168, 168,
-  // Top
-  210, 210, 210,
-  210, 210, 210,
-  210, 210, 210,
-  210, 210, 210,
-  210, 210, 210,
-  210, 210, 210,
   // Bottom
+  244, 244, 244,
+  244, 244, 244,
+  244, 244, 244,
+  244, 244, 244,
+  244, 244, 244,
+  244, 244, 244,
+  // Right
+  252, 252, 252,
+  252, 252, 252,
+  252, 252, 252,
+  252, 252, 252,
+  252, 252, 252,
+  252, 252, 252,
+  // Top
+  252, 252, 252,
+  252, 252, 252,
+  252, 252, 252,
+  252, 252, 252,
+  252, 252, 252,
+  252, 252, 252,
+  // Left
+  244, 244, 244,
+  244, 244, 244,
+  244, 244, 244,
+  244, 244, 244,
+  244, 244, 244,
+  244, 244, 244,
+  // Front
+  248, 248, 248,
+  248, 248, 248,
+  248, 248, 248,
+  248, 248, 248,
+  248, 248, 248,
+  248, 248, 248,
+  // Back
   252, 252, 252,
   252, 252, 252,
   252, 252, 252,
@@ -126,32 +128,6 @@ const configureColorBuffers = (gl, program) => {
   gl.vertexAttribPointer(colorLocation, size, type, normalize, stride, offset)
 }
 
-const configureMatrix = (gl, program) => {
-  // lookup uniforms
-  const matrixLocation = gl.getUniformLocation(program, 'u_matrix')
-
-  const translation = [-0.5, -0.5, -2]
-  const rotation = [degToRad(190), degToRad(40), degToRad(320)]
-  const scale = [1, 1, 1]
-  const fieldOfViewRadians = degToRad(60)
-
-  // Compute the matrix
-  const aspect = gl.canvas.width / gl.canvas.height
-  const zNear = 0.1
-  const zFar = 100
-
-  let matrix = m4.perspective(fieldOfViewRadians, aspect, zNear, zFar)
-
-  matrix = m4.translate(matrix, translation[0], translation[1], translation[2])
-  matrix = m4.xRotate(matrix, rotation[0])
-  matrix = m4.yRotate(matrix, rotation[1])
-  matrix = m4.zRotate(matrix, rotation[2])
-  matrix = m4.scale(matrix, scale[0], scale[1], scale[2])
-
-  // Set the matrix.
-  gl.uniformMatrix4fv(matrixLocation, false, matrix)
-}
-
 const main = () => {
   const canvas = document.querySelector('#webgl')
   const gl     = canvas.getContext('webgl')
@@ -164,7 +140,6 @@ const main = () => {
 
   configurePositionBuffers(gl, program)
   configureColorBuffers(gl, program)
-  configureMatrix(gl, program)
 
   resizeCanvasToDisplaySize(gl.canvas)
 
@@ -175,10 +150,7 @@ const main = () => {
 
   gl.cullFace(gl.FRONT)
 
-  drawScene(gl, vertices)
+  drawScene(gl, program, 0, vertices)
 }
-
-const radToDeg = r => r * 180 / Math.PI
-const degToRad = d => d * Math.PI / 180
 
 main()
