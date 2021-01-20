@@ -82,7 +82,7 @@ for (let i = 0; i < 50; i++) {
     tint: t <= 0.5 ?
       tintNames[0]
       :
-      t > 0.5 && t <= 0.8 ?
+      t > 0.5 && t <= 0.95 ?
       tintNames[1]
       :
       tintNames[2],
