@@ -47,51 +47,6 @@ const scale = (vertices, factor) => vertices.map(v => v * factor)
 
 const vertices = scale(unitCube, 0.5)
 
-const colors = new Uint8Array([
-  // Bottom
-  244, 244, 244,
-  244, 244, 244,
-  244, 244, 244,
-  244, 244, 244,
-  244, 244, 244,
-  244, 244, 244,
-  // Right
-  252, 252, 252,
-  252, 252, 252,
-  252, 252, 252,
-  252, 252, 252,
-  252, 252, 252,
-  252, 252, 252,
-  // Top
-  252, 252, 252,
-  252, 252, 252,
-  252, 252, 252,
-  252, 252, 252,
-  252, 252, 252,
-  252, 252, 252,
-  // Left
-  244, 244, 244,
-  244, 244, 244,
-  244, 244, 244,
-  244, 244, 244,
-  244, 244, 244,
-  244, 244, 244,
-  // Front
-  248, 248, 248,
-  248, 248, 248,
-  248, 248, 248,
-  248, 248, 248,
-  248, 248, 248,
-  248, 248, 248,
-  // Back
-  252, 252, 252,
-  252, 252, 252,
-  252, 252, 252,
-  252, 252, 252,
-  252, 252, 252,
-  252, 252, 252,
-])
-
 const configurePositionBuffers = (gl, program) => {
   const positionBuffer   = gl.createBuffer()
   const positionLocation = gl.getAttribLocation(program, 'a_position')
@@ -111,24 +66,6 @@ const configurePositionBuffers = (gl, program) => {
   gl.vertexAttribPointer(positionLocation, size, type, normalize, stride, offset)
 }
 
-const configureColorBuffers = (gl, program) => {
-  const colorBuffer = gl.createBuffer()
-  const colorLocation = gl.getAttribLocation(program, 'a_color')
-
-  const size = 3                 // 3 components per iteration
-  const type = gl.UNSIGNED_BYTE  // the data is 8bit unsigned values
-  const normalize = true         // normalize the data (convert from 0-255 to 0-1)
-  const stride = 0               // 0 = move forward size * sizeof(type) each iteration to get the next position
-  const offset = 0               // start at the beginning of the buffer
-
-  gl.bindBuffer(gl.ARRAY_BUFFER, colorBuffer)
-  gl.bufferData(gl.ARRAY_BUFFER, colors, gl.STATIC_DRAW)
-
-  gl.enableVertexAttribArray(colorLocation)
-  gl.bindBuffer(gl.ARRAY_BUFFER, colorBuffer)
-  gl.vertexAttribPointer(colorLocation, size, type, normalize, stride, offset)
-}
-
 const main = () => {
   const canvas = document.querySelector('#webgl')
   const gl     = canvas.getContext('webgl')
@@ -140,7 +77,6 @@ const main = () => {
   gl.useProgram(program)
 
   configurePositionBuffers(gl, program)
-  configureColorBuffers(gl, program)
 
   resizeCanvasToDisplaySize(gl.canvas)
 
@@ -151,14 +87,23 @@ const main = () => {
 
   gl.cullFace(gl.FRONT)
 
-  const matrixLocation     = gl.getUniformLocation(program, 'u_matrix')
+  const matrixLocation = gl.getUniformLocation(program, 'u_matrix')
+  const colorLocation  = gl.getAttribLocation(program, 'a_color')
+  const colorBuffer    = gl.createBuffer()
 
   const aspect = gl.canvas.width / gl.canvas.height
   const zNear  = 0.1
 
   const projectionMatrix = m4.perspective(fieldOfViewRadians, aspect, zNear, zFar)
 
-  drawScene(gl, matrixLocation, projectionMatrix, 0)
+  drawScene(
+    gl,
+    matrixLocation,
+    projectionMatrix,
+    colorLocation,
+    colorBuffer,
+    0,
+  )
 }
 
 main()
