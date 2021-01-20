@@ -1,4 +1,3 @@
-
 const unitCube = new Float32Array([
   // Front
   0, 0, 0,
@@ -44,7 +43,9 @@ const unitCube = new Float32Array([
   0, 1, 0,
 ])
 
-const vertices = unitCube
+const scale = (vertices, factor) => vertices.map(v => v * factor)
+
+const vertices = scale(unitCube, 0.5)
 
 const colors = new Uint8Array([
   // Bottom
@@ -150,7 +151,14 @@ const main = () => {
 
   gl.cullFace(gl.FRONT)
 
-  drawScene(gl, program, 0, vertices)
+  const matrixLocation     = gl.getUniformLocation(program, 'u_matrix')
+
+  const aspect = gl.canvas.width / gl.canvas.height
+  const zNear  = 0.1
+
+  const projectionMatrix = m4.perspective(fieldOfViewRadians, aspect, zNear, zFar)
+
+  drawScene(gl, matrixLocation, projectionMatrix, 0)
 }
 
 main()

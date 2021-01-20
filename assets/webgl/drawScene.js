@@ -1,41 +1,59 @@
 const degToRad = d => d * Math.PI / 180
 
-const translation = [-0.5, -0.5, -2]
-
-const configureMatrix = (gl, program, deltaTime) => {
-  const matrixLocation     = gl.getUniformLocation(program, 'u_matrix')
-  const fieldOfViewRadians = degToRad(60)
-
-  const aspect = gl.canvas.width / gl.canvas.height
-  const zNear  = 0.1
-  const zFar   = 100
-
-  let matrix = m4.perspective(fieldOfViewRadians, aspect, zNear, zFar)
-
-  translation[1] -= deltaTime * 0.01
-
-  matrix = m4.translate(matrix, translation[0], translation[1], translation[2])
-
-  gl.uniformMatrix4fv(matrixLocation, false, matrix)
-}
+const fieldOfViewRadians = degToRad(60)
+const zFar               = 10
 
 let lastFrame
 
-const drawScene = (gl, program, timestamp, vertices) => {
+let instances = [ ]
+
+for (let i = 0; i < 50; i++) {
+  instances.push({
+    x:   Math.random() * 2     - 1,
+    y:   Math.random() * 2     - 1,
+    z: -(Math.random() * zFar) - 1,
+  })
+
+  instances[i].x = (instances[i].x * -instances[i].z) * fieldOfViewRadians
+  instances[i].y = (instances[i].y * -instances[i].z) * fieldOfViewRadians
+}
+
+const drawScene = (
+  gl,
+  matrixLocation,
+  projectionMatrix,
+  timestamp
+) => {
   if (lastFrame === undefined)
     lastFrame = timestamp
 
   gl.clear(gl.COLOR_BUFFER_BIT | gl.DEPTH_BUFFER_BIT)
 
-  const primitiveType = gl.TRIANGLES
-  const offset        = 0
-  const count         = vertices.length / 3 // 3 vertices/triangle
+  for (let i = 0; i < instances.length; i++) {
+    const primitiveType = gl.TRIANGLES
+    const offset        = 0
+    const count         = 108 / 3 // 3 vertices/triangle
+    const yOffset       = timestamp * 0.00125
 
-  configureMatrix(gl, program, timestamp - lastFrame)
+    const matrix = m4.translate(
+      projectionMatrix,
+      instances[i].x,
+      instances[i].y - yOffset,
+      instances[i].z
+    )
 
-  gl.drawArrays(primitiveType, offset, count)
+    gl.uniformMatrix4fv(matrixLocation, false, matrix)
+    gl.drawArrays(primitiveType, offset, count)
+  }
 
   lastFrame = timestamp
 
-  requestAnimationFrame(ts => drawScene(gl, program, ts * 0.001, vertices))
+  requestAnimationFrame(
+    ts => drawScene(
+      gl,
+      matrixLocation,
+      projectionMatrix,
+      ts * 0.001,
+    )
+  )
 }
