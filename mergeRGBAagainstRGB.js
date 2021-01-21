@@ -15,14 +15,14 @@ const merge = ({ r, g, b, a, against }) => {
 }
 
 const [red, green, blue] = merge({
-  r: 112,
-  g: 101,
-  b: 127,
-  a: 0.0125,
+  r: 109,
+  g: 111,
+  b: 111,
+  a: 0.2,
   against: {
-    r: 255,
-    g: 255,
-    b: 255
+    r: 41,
+    g: 43,
+    b: 44
   }
 })
 

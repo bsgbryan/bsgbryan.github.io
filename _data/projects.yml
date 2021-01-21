@@ -1,47 +1,58 @@
-- name:   Jumpy McRunface
-  pitch:  A fun, zen little infinite platformer for iOS
-  href:   https://itunes.apple.com/us/app/jumpy-mcrunface/id1151471322?mt=8
-  action: View on iTunes
-  type:   Game
 
-- name:   Wavy McFormface
-  pitch:  "An analog synth for Unity in C#"
-  href:   https://github.com/MayBGames/wavy-mcformface
-  action: View on GitHub
-  type:   Plugin
 
-- name:   Babbling On
-  pitch:  A repository detailing my learnings regarding Babylon.js
-  href:   https://github.com/MayBGames/babbling-on
-  action: View on GitHub
-  type:   Repository
+- name:  Laminae
+  pitch: A suite of tools to make working with React & React Native apps even more fun
+  type:  cli tool, Node.js, JavaScript
+  actions:
+    - type:  github
+      label: View on GitHub
+      href:  https://github.com/bsgbryan/laminae
 
-- name:   Skyll
-  pitch:  A procedural level generator for 2/2.5d platformers
-  href:   https://github.com/MayBGames/skyll
-  action: View on GitHub
-  type:   Framework
+- name:  Mädūl
+  pitch: A simple, fun, testable way to write performant, maintainable, async code
+  type:  Library, Node.js, JavaScript
+  actions:
+    - type:  github
+      label: View on GitHub
+      href:  https://github.com/bsgbryan/madul
 
-- name:   Madul
-  pitch:  An elegant way to make everything beautifully asynchronous
-  href:   https://github.com/bsgbryan/madul
-  action: View on GitHub
-  type:   Library
+- name:  pug
+  pitch: A game engine targeted for procedural content coded in a functional style
+  type:  Plugin, c++, DirectX
+  actions:
+    - type:  github
+      label: View on GitHub
+      href:  https://github.com/bsgbryan/pug
 
-- name:   Jyn
-  pitch:  A simple, fun, fully asyn api tool
-  href:   https://github.com/bsgbryan/jyn
-  action: View on GitHub
-  type:   Framework
+- name:  My High Score
+  pitch: Do stuff, score big, be happy!
+  type:  Mobile App, React Native, JavaScript
+  actions:
+    - type:  app-store-ios
+      label: View on the iOS App Store
+      href:  https://itunes.apple.com/us/app/jumpy-mcrunface/id1151471322?mt=8
+    - type:  google-play
+      label: View on the Google Play Store
+      href:  https://itunes.apple.com/us/app/jumpy-mcrunface/id1151471322?mt=8
 
-- name:   My Music
-  pitch:  Tunes I've made over the years
-  href:   https://soundcloud.com/bsgbryan/tracks
-  action: Listen on SoundCloud
-  type:   Music
+- name:  Jyn
+  pitch: A simple, fun, fully asyn api tool
+  type:  Framework, Node.js, JavaScript
+  actions:
+    - type:  github
+      label: View on GitHub
+      href:  https://github.com/bsgbryan/jyn
 
-- name:   Egghead Anarchy
-  pitch:  A video game &amp; nerd culture podcast
-  href:   https://soundcloud.com/egghead-anarchy
-  action: Listen on SoundCloud
-  type:   Podcast
+- name:  My Music
+  pitch: Tunes I've made over the years
+  type:  Music
+  actions:
+    - type:  soundcloud
+      label: Listen on SoundCloud
+      href:  https://soundcloud.com/bsgbryan/tracks
+
+# - name:   Egghead Anarchy
+#   pitch:  A video game &amp; nerd culture podcast
+#   href:   https://soundcloud.com/egghead-anarchy
+#   action: Listen on SoundCloud
+#   type:   Podcast

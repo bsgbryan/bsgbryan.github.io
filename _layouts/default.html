@@ -6,10 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
-    <link rel="stylesheet" href="/assets/light.css" title="light">
-    <link rel="stylesheet" href="/assets/dark.css"  title="dark" >
-    <link rel="stylesheet" href="/assets/beach.css" title="beach">
-    <link rel="stylesheet" href="/assets/tron.css"  title="tron" >
+    <link rel="stylesheet" href="{{ 'assets/light.css' | relative_url }}">
+    <link rel="stylesheet" href="{{ 'assets/dark.css'  | relative_url }}">
   </head>
   <body>
     <canvas id="webgl" style="position: fixed; width: 100%; height: 100%; z-index: -1;"></canvas>
@@ -26,12 +24,9 @@
     </div>
     <div class="footer container">
       <div class="row justify-content-center">
-        <a href="https://www.patreon.com/bsgbryan"    class="col-1 fab fa-patreon"    target="_blank"></a>
-        <a href="https://www.instagram.com/bsgbryan/" class="col-1 fab fa-instagram"  target="_blank"></a>
-        <a href="https://twitter.com/bsgbryan"        class="col-1 fab fa-twitter"    target="_blank"></a>
-        <a href="https://github.com/bsgbryan"         class="col-1 fab fa-github"     target="_blank"></a>
-        <a href="https://soundcloud.com/bsgbryan"     class="col-1 fab fa-soundcloud" target="_blank"></a>
-        <a href="https://www.twitch.tv/bsgbryan"      class="col-1 fab fa-twitch"     target="_blank"></a>
+        <a href="https://twitter.com/bsgbryan"        class="col-1 fab fa-twitter"   target="_blank" title="Where I talk about stuff"></a>
+        <a href="https://www.instagram.com/bsgbryan/" class="col-1 fab fa-instagram" target="_blank" title="Sometimes I post pretty pictures"></a>
+        <a href="https://www.patreon.com/bsgbryan"    class="col-1 fab fa-patreon"   target="_blank" title="Support me on Patreon"></a>
       </div>
     </div>
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>

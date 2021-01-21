@@ -12,7 +12,17 @@ type:    home
         <div class="card-body">
           <h4 class="card-title">{{ project.name }}</h4>
           <p class="card-text">{{ project.pitch }}</p>
-          <a href="{{ project.href }}" class="btn btn-primary" target="_blank">{{ project.action }}</a>
+          <div class="row">
+            {% for action in project.actions %}
+              <a
+                href="{{ action.href }}"
+                class="col-6 fab fa-3x fa-{{ action.type }}"
+                target="_blank"
+                aria-label="{{ action.label }}"
+                title="{{ action.label }}"
+              ></a>
+            {% endfor %}
+          </div>
         </div>
         <div class="card-footer">
           <small class="text-muted">{{ project.type }}</small>

@@ -1,328 +1,336 @@
 ---
 ---
 
-@import url('https://fonts.googleapis.com/css?family=Nunito|Quicksand|Raleway|Cousine')
-$page-shadow-front-color: rgb(187, 187, 255)
-$page-shadow-back-color:  rgb(221, 221, 255)
+@media (prefers-color-scheme: light)
+  @import url('https://fonts.googleapis.com/css?family=Nunito|Quicksand|Raleway|Cousine')
+  $page-shadow-front-color: rgb(187, 187, 255)
+  $page-shadow-back-color:  rgb(221, 221, 255)
 
-$heading-shadow-front-color: transparentize($page-shadow-front-color, 0.5)
-$heading-shadow-back-color:  transparentize($page-shadow-back-color,  0.5)
+  $heading-shadow-front-color: transparentize($page-shadow-front-color, 0.5)
+  $heading-shadow-back-color:  transparentize($page-shadow-back-color,  0.5)
 
-$box-shadow-front-color: rgb(255,227,212)
-$box-shadow-back-color:  rgb(255,243,187)
+  $box-shadow-front-color: rgb(255,227,212)
+  $box-shadow-back-color:  rgb(255,243,187)
 
-$img-shadow-front-color: rgb(153,204,255)
-$img-shadow-back-color:  rgb(221,238,255)
+  $img-shadow-front-color: rgb(153,204,255)
+  $img-shadow-back-color:  rgb(221,238,255)
 
-$available-link-color:   rgb(91, 89, 63)
-$unavailable-link-color: rgb(144, 140, 103)
-$button-border-color:    $unavailable-link-color
+  $available-link-color:   rgb(91, 89, 63)
+  $unavailable-link-color: rgb(144, 140, 103)
+  $button-border-color:    $unavailable-link-color
 
-$primary-text-color: rgb(18, 18, 45)
-$heading-text-color: rgb(47,47,64)
-$lead-text-color:    rgb(178,163,95)
+  $primary-text-color: rgb(18, 18, 45)
+  $heading-text-color: rgb(47,47,64)
+  $lead-text-color:    rgb(178,163,95)
 
-$content-background-color: rgb(253.2125, 253.075, 255)
+  $content-background-color: rgb(253.2125, 253.075, 255)
 
-$base-vertical-whitespace: 2rem
+  $base-vertical-whitespace: 2rem
 
-$base-letter-spacing: 1px
+  $base-letter-spacing: 1px
 
-$base-syntax-color: rgb(64, 64, 64)
+  $base-syntax-color: rgb(64, 64, 64)
 
-$glow: white
+  $glow: white
 
-=shadow($mode, $n, $front, $back)
-  #{$mode}-shadow: #{$n}px #{$n * 2}px 0 $front, #{$n * 2}px #{$n * 4}px 0 $back
+  =shadow($mode, $n, $front, $back)
+    #{$mode}-shadow: #{$n}px #{$n * 2}px 0 $front, #{$n * 2}px #{$n * 4}px 0 $back
 
-img:not(.emoji)
-  margin-top: $base-vertical-whitespace
-  margin-bottom: $base-vertical-whitespace
-  border-radius: 0.25rem
-
-hr.my-4,
-hr.my-2,
-#content hr
-  border-top: 1px solid transparentize(rgb(208,208,240), 0.75)
-
-.jumbotron h1.display-1,
-#content h1,
-#content h2,
-#content h3,
-#content h5
-.card-deck .card h4.card-title
-  font-family: monospace
-
-.jumbotron .lead,
-#content p,
-#content li
-  font-family: 'Nunito', sans-serif
-
-.jumbotron
-  background-color: transparent
-  margin-top: 0
-  margin-bottom: 0
-  padding-bottom: 1rem
-
-  h1.display-1
-    display: flex
-    align-items: center
-    justify-content: center
-    font-family: 'CoreCircus', sans-serif
-    text-transform: uppercase
-    font-size: 10vw
-    text-align: center
-    line-height: 1
-    margin: 0
-    width: 100%
-    height: 100%
-    transform: translateZ(0)
-    backface-visibility: hidden
-    color: $heading-text-color
-    text-shadow: -1px -1px 0 rgba(255, 255, 255, .7), 1px -1px 0 rgba(255, 255, 255, .7), -1px 1px 0 rgba(255, 255, 255, .7), 1px 1px 0 rgba(255, 255, 255, .7), -1px 2px 1px #a0a0a0, -2px 4px 2px #a0a0a0, -3px 6px 3px rgba(#a0a0a0, 0.6), -4px 8px 4px rgba(#a0a0a0, 0.5), -5px 10px 5px rgba(#a0a0a0, 0.4), -6px 12px 6px rgba(#a0a0a0, 0.3), -7px 13px 7px rgba(#a0a0a0, 0.2), -8px 15px 8px rgba(#a0a0a0, 0.2), -9px 17px 9px rgba(#a0a0a0, 0.2), -10px 19px 10px rgba(#a0a0a0, 0.2), -11px 20px 11px rgba(#a0a0a0, 0.1), -12px 22px 12px rgba(#a0a0a0, 0.1), -13px 24px 13px rgba(#a0a0a0, 0.1), -14px 26px 14px rgba(#a0a0a0, 0.1), -15px 28px 15px rgba(#a0a0a0, 0.1), -16px 30px 16px rgba(#a0a0a0, 0.1), -17px 32px 17px rgba(#a0a0a0, 0.1), -18px 34px 18px rgba(#a0a0a0, 0.1), -19px 36px 19px rgba(#a0a0a0, 0.1), -20px 38px 20px rgba(#a0a0a0, 0.1), -21px 39px 21px rgba(#a0a0a0, 0.1)
-
-  p.lead
-    letter-spacing: $base-letter-spacing
-    color: $heading-text-color
-    text-align: center
-    margin-top: 2rem
-
-.nav
-  margin-bottom: 0
-
-  .nav-link
-    text-transform: lowercase
-    letter-spacing: $base-letter-spacing
-    color: rgb(187, 183, 145)
-    font-family: 'Quicksand', sans-serif
-    padding-top: 0
-    padding-bottom: 0
-
-    &.active
-      color: rgb(144, 134, 103)
-
-.footer
-  &.container
-    margin-top: $base-vertical-whitespace * 2
+  img:not(.emoji)
+    margin-top: $base-vertical-whitespace
     margin-bottom: $base-vertical-whitespace
+    border-radius: 0.25rem
 
-  .fa:hover
-    text-decoration: none
+  hr.my-4,
+  hr.my-2,
+  #content hr
+    border-top: 1px solid transparentize(rgb(208,208,240), 0.75)
 
-.card-deck
-  margin-bottom: $base-vertical-whitespace
+  .jumbotron h1.display-1,
+  #content h1,
+  #content h2,
+  #content h3,
+  #content h5
+  .card-deck .card h4.card-title
+    font-family: monospace
 
-  .card
-    background-color: $content-background-color
-    margin-top: $base-vertical-whitespace + 1rem
-    border: none
+  .jumbotron .lead,
+  #content p,
+  #content li
+    font-family: 'Nunito', sans-serif
 
-    box-shadow: -1px -1px 0 rgba(255, 255, 255, .7), 1px -1px 0 rgba(255, 255, 255, .7), -1px 1px 0 rgba(255, 255, 255, .7), 1px 1px 0 rgba(255, 255, 255, .7), -1px 2px 1px #a0a0a0, -2px 4px 2px #a0a0a0, -3px 6px 3px rgba(#a0a0a0, 0.6), -4px 8px 4px rgba(#a0a0a0, 0.5), -5px 10px 5px rgba(#a0a0a0, 0.4), -6px 12px 6px rgba(#a0a0a0, 0.3), -7px 13px 7px rgba(#a0a0a0, 0.2), -8px 15px 8px rgba(#a0a0a0, 0.2), -9px 17px 9px rgba(#a0a0a0, 0.2), -10px 19px 10px rgba(#a0a0a0, 0.2), -11px 20px 11px rgba(#a0a0a0, 0.1), -12px 22px 12px rgba(#a0a0a0, 0.1), -13px 24px 13px rgba(#a0a0a0, 0.1), -14px 26px 14px rgba(#a0a0a0, 0.1), -15px 28px 15px rgba(#a0a0a0, 0.1), -16px 30px 16px rgba(#a0a0a0, 0.1), -17px 32px 17px rgba(#a0a0a0, 0.1), -18px 34px 18px rgba(#a0a0a0, 0.1), -19px 36px 19px rgba(#a0a0a0, 0.1), -20px 38px 20px rgba(#a0a0a0, 0.1), -21px 39px 21px rgba(#a0a0a0, 0.1)
+  .jumbotron
+    background-color: transparent
+    margin-top: 0
+    margin-bottom: 0
+    padding-bottom: 1rem
 
-    p.card-text
-      color: $heading-text-color
-      font-family: 'Raleway', sans-serif
-
-    h4.card-title
-      color: $heading-text-color
-      text-shadow: -1px -1px 0 rgb(255, 255, 255), 1px -1px 0 rgb(255, 255, 255), -1px 1px 0 rgb(255, 255, 255), 1px 1px 0 rgb(255, 255, 255)
-
-  .card-footer
-    border-top: none
-    background-color: rgba(112, 101, 127, 0.02)
-
-    small.text-muted
-      color: #2f2f40 !important
+    h1.display-1
+      display: flex
+      align-items: center
+      justify-content: center
+      font-family: 'CoreCircus', sans-serif
       text-transform: uppercase
-      text-shadow: -1px -1px 0 rgb(255, 255, 255), 1px -1px 0 rgb(255, 255, 255), -1px 1px 0 rgb(255, 255, 255), 1px 1px 0 rgb(255, 255, 255)
+      font-size: 10vw
+      text-align: center
+      line-height: 1
+      margin: 0
+      width: 100%
+      height: 100%
+      transform: translateZ(0)
+      backface-visibility: hidden
+      color: $heading-text-color
+      text-shadow: -1px -1px 0 rgba(255, 255, 255, .7), 1px -1px 0 rgba(255, 255, 255, .7), -1px 1px 0 rgba(255, 255, 255, .7), 1px 1px 0 rgba(255, 255, 255, .7), -1px 2px 1px #a0a0a0, -2px 4px 2px #a0a0a0, -3px 6px 3px rgba(#a0a0a0, 0.6), -4px 8px 4px rgba(#a0a0a0, 0.5), -5px 10px 5px rgba(#a0a0a0, 0.4), -6px 12px 6px rgba(#a0a0a0, 0.3), -7px 13px 7px rgba(#a0a0a0, 0.2), -8px 15px 8px rgba(#a0a0a0, 0.2), -9px 17px 9px rgba(#a0a0a0, 0.2), -10px 19px 10px rgba(#a0a0a0, 0.2), -11px 20px 11px rgba(#a0a0a0, 0.1), -12px 22px 12px rgba(#a0a0a0, 0.1), -13px 24px 13px rgba(#a0a0a0, 0.1), -14px 26px 14px rgba(#a0a0a0, 0.1), -15px 28px 15px rgba(#a0a0a0, 0.1), -16px 30px 16px rgba(#a0a0a0, 0.1), -17px 32px 17px rgba(#a0a0a0, 0.1), -18px 34px 18px rgba(#a0a0a0, 0.1), -19px 36px 19px rgba(#a0a0a0, 0.1), -20px 38px 20px rgba(#a0a0a0, 0.1), -21px 39px 21px rgba(#a0a0a0, 0.1)
 
-span.btn-primary
-  color: $unavailable-link-color
+    p.lead
+      letter-spacing: $base-letter-spacing
+      color: $heading-text-color
+      text-align: center
+      margin-top: 2rem
 
-  &:hover
-    cursor: default
+  .nav
+    margin-bottom: 0
 
-.btn-primary,
-.btn-primary:hover,
-.btn-primary:active,
-.btn-primary:visited,
-  background-color: transparent
-  border-color: rgb(106, 106, 131)
-  color: rgb(106, 106, 131) !important
-  font-family: 'Quicksand', sans-serif
+    .nav-link
+      text-transform: lowercase
+      letter-spacing: $base-letter-spacing
+      color: rgb(187, 183, 145)
+      font-family: 'Quicksand', sans-serif
+      padding-top: 0
+      padding-bottom: 0
 
-  &:focus
-    box-shadow: none
+      &.active
+        color: rgb(144, 134, 103)
 
-.footer,
-#support
-  a.fab,
-  a.fas
-    text-align: center
-    width: 100%
-    color: rgb(106, 106, 131)
-    text-shadow: -1px -1px 0 rgba(255, 255, 255, .7), 1px -1px 0 rgba(255, 255, 255, .7), -1px 1px 0 rgba(255, 255, 255, .7), 1px 1px 0 rgba(255, 255, 255, .7), -2px 4px 2px rgba(#a0a0a0, 0.3), -3px 6px 3px rgba(#a0a0a0, 0.2), -4px 8px 4px rgba(#a0a0a0, 0.1)
+  .footer
+    &.container
+      margin-top: $base-vertical-whitespace * 2
+      margin-bottom: $base-vertical-whitespace
 
-    &:hover
+    .fa:hover
       text-decoration: none
 
-#content,
-#instructions
-  margin-top: $base-vertical-whitespace + 1rem
-  padding: $base-vertical-whitespace + 1rem
-  background-color: $content-background-color
-  border-radius: 0.25rem
-  box-shadow: -1px -1px 0 rgba(255, 255, 255, .7), 1px -1px 0 rgba(255, 255, 255, .7), -1px 1px 0 rgba(255, 255, 255, .7), 1px 1px 0 rgba(255, 255, 255, .7), -1px 2px 1px #a0a0a0, -2px 4px 2px #a0a0a0, -1.25px 6px 3px rgba(#a0a0a0, 0.6), -1.5px 8px 4px rgba(#a0a0a0, 0.5), -1.75px 10px 5px rgba(#a0a0a0, 0.4), -2px 12px 6px rgba(#a0a0a0, 0.3), -2.25px 13px 7px rgba(#a0a0a0, 0.2), -2.5px 15px 8px rgba(#a0a0a0, 0.2), -2.75px 17px 9px rgba(#a0a0a0, 0.2), -3px 19px 10px rgba(#a0a0a0, 0.2), -3.25px 20px 11px rgba(#a0a0a0, 0.1), -3.5px 22px 12px rgba(#a0a0a0, 0.1), -3.75px 24px 13px rgba(#a0a0a0, 0.1), -4px 26px 14px rgba(#a0a0a0, 0.1), -4.25px 28px 15px rgba(#a0a0a0, 0.1), -4.5px 30px 16px rgba(#a0a0a0, 0.1), -4.75px 32px 17px rgba(#a0a0a0, 0.1), -5px 34px 18px rgba(#a0a0a0, 0.1), -5.25px 36px 19px rgba(#a0a0a0, 0.1), -5.5px 38px 20px rgba(#a0a0a0, 0.1), -5.75px 39px 21px rgba(#a0a0a0, 0.1)
-
-  h1, h2, h3, h4, h5
-    color: $heading-text-color
-    font-family: 'Raleway', sans-serif
-    font-weight: 600
-  
-  h1
-    margin-bottom: 1rem
-    text-shadow: -1px -1px 0 $glow, 1px -1px 0 $glow, -1px 1px 0 $glow, 1px 1px 0 $glow
-
-    & + h2 strong
-      margin-top: 0
-
-  h2
-    & > * 
-      font-size: 1.5rem
-      font-family: Quicksand
-    & + h3
-      margin-left: 1rem
-      font-size: 1rem
-      color: black
-
-      em
-        color: lighten(black, 50%)
-        font-style: normal
-    strong
-      margin-top: 1.5rem
-      display: inline-block
-    
-      & + code
-        color: lighten(#2f2f40, 35%)
-
-  h3
-    margin-left: 0.5rem
-
-    & + ul
-      > li
-        margin: 0.5rem 0
-      ul
-        list-style-type: circle
-
-        li
-          color: lighten(black, 25%)
-
-  em
-    color: lighten(black, 50%)
-    font-style: normal
-
-  p,
-  li,
-  table
-    color: $heading-text-color
-
-    & + h1,
-    & + h2,
-    & + h3,
-    & + h4,
-    & + h5
-      margin-top: $base-vertical-whitespace
-
-  p
-    margin-left: 1rem
-
-  abbr[title]
-    text-decoration: none
-    color: darken($primary-text-color, 5%)
-
-  a
-    color: #bbb791
-
-  .language-sh
-    margin-top:    $base-vertical-whitespace
+  .card-deck
     margin-bottom: $base-vertical-whitespace
-    margin-right: calc(-3rem - 1px)
-    margin-left: calc(-3rem - 1px)
 
-    .highlight
-      padding: 1rem 1.5rem
+    .card
+      background-color: $content-background-color
+      margin-top: $base-vertical-whitespace + 1rem
+      border: none
 
-      .gp
-        color: lighten($base-syntax-color, 30%)
+      box-shadow: -1px -1px 0 rgba(255, 255, 255, .7), 1px -1px 0 rgba(255, 255, 255, .7), -1px 1px 0 rgba(255, 255, 255, .7), 1px 1px 0 rgba(255, 255, 255, .7), -1px 2px 1px #a0a0a0, -2px 4px 2px #a0a0a0, -3px 6px 3px rgba(#a0a0a0, 0.6), -4px 8px 4px rgba(#a0a0a0, 0.5), -5px 10px 5px rgba(#a0a0a0, 0.4), -6px 12px 6px rgba(#a0a0a0, 0.3), -7px 13px 7px rgba(#a0a0a0, 0.2), -8px 15px 8px rgba(#a0a0a0, 0.2), -9px 17px 9px rgba(#a0a0a0, 0.2), -10px 19px 10px rgba(#a0a0a0, 0.2), -11px 20px 11px rgba(#a0a0a0, 0.1), -12px 22px 12px rgba(#a0a0a0, 0.1), -13px 24px 13px rgba(#a0a0a0, 0.1), -14px 26px 14px rgba(#a0a0a0, 0.1), -15px 28px 15px rgba(#a0a0a0, 0.1), -16px 30px 16px rgba(#a0a0a0, 0.1), -17px 32px 17px rgba(#a0a0a0, 0.1), -18px 34px 18px rgba(#a0a0a0, 0.1), -19px 36px 19px rgba(#a0a0a0, 0.1), -20px 38px 20px rgba(#a0a0a0, 0.1), -21px 39px 21px rgba(#a0a0a0, 0.1)
 
-  .language-sh > .highlight
-    background-color: rgba(112, 101, 127, 0.05)
-    border-top: 1px solid rgba(black, 0.0125)
-    border-bottom: 1px solid rgba(black, 0.0125)
+      p.card-text
+        color: $heading-text-color
+        font-family: 'Raleway', sans-serif
 
-  .language-sh .highlight
-    margin-bottom: 0
-    padding: 0.5rem
+      h4.card-title
+        color: $heading-text-color
+        text-shadow: -1px -1px 0 rgb(255, 255, 255), 1px -1px 0 rgb(255, 255, 255), -1px 1px 0 rgb(255, 255, 255), 1px 1px 0 rgb(255, 255, 255)
 
-  .language-sh .highlight,
-  p > code.highlighter-rouge,
-  li > code.highlighter-rouge
-    color: #8080a2
-    text-shadow: -1px -1px 0 rgba(255, 255, 255, .5), 1px -1px 0 rgba(255, 255, 255, .5), -1px 1px 0 rgba(255, 255, 255, .5), 1px 1px 0 rgba(255, 255, 255, .5)
+    .card-footer
+      border-top: none
+      background-color: rgba(112, 101, 127, 0.02)
 
-  ol, ul
-    padding-left: 1rem
-    ul
-      padding-left: 1rem
-      list-style-type: disc
+      small.text-muted
+        color: #2f2f40 !important
+        text-transform: uppercase
+        text-shadow: -1px -1px 0 rgb(255, 255, 255), 1px -1px 0 rgb(255, 255, 255), -1px 1px 0 rgb(255, 255, 255), 1px 1px 0 rgb(255, 255, 255)
+
+  span.btn-primary
+    color: $unavailable-link-color
+
+    &:hover
+      cursor: default
+
+  .btn-primary,
+  .btn-primary:hover,
+  .btn-primary:active,
+  .btn-primary:visited,
+    background-color: transparent
+    border-color: rgb(106, 106, 131)
+    color: rgb(106, 106, 131) !important
+    font-family: 'Quicksand', sans-serif
+
+    &:focus
+      box-shadow: none
+
+  .footer,
+  #support,
+  .card-deck .card
+    a.fab,
+    a.fas
+      text-align: center
+      width: 100%
+      color: rgb(106, 106, 131)
+      text-shadow: -1px -1px 0 rgba(255, 255, 255, .7), 1px -1px 0 rgba(255, 255, 255, .7), -1px 1px 0 rgba(255, 255, 255, .7), 1px 1px 0 rgba(255, 255, 255, .7), -2px 4px 2px rgba(#a0a0a0, 0.3), -3px 6px 3px rgba(#a0a0a0, 0.2), -4px 8px 4px rgba(#a0a0a0, 0.1)
+
+      &:hover
+        text-decoration: none
+
+  .card-deck .card
+    .row
+      justify-content: center
+      a.fab
+        text-shadow: none
+
+  #content,
+  #instructions
+    margin-top: $base-vertical-whitespace + 1rem
+    padding: $base-vertical-whitespace + 1rem
+    background-color: $content-background-color
+    border-radius: 0.25rem
+    box-shadow: -1px -1px 0 rgba(255, 255, 255, .7), 1px -1px 0 rgba(255, 255, 255, .7), -1px 1px 0 rgba(255, 255, 255, .7), 1px 1px 0 rgba(255, 255, 255, .7), -1px 2px 1px #a0a0a0, -2px 4px 2px #a0a0a0, -1.25px 6px 3px rgba(#a0a0a0, 0.6), -1.5px 8px 4px rgba(#a0a0a0, 0.5), -1.75px 10px 5px rgba(#a0a0a0, 0.4), -2px 12px 6px rgba(#a0a0a0, 0.3), -2.25px 13px 7px rgba(#a0a0a0, 0.2), -2.5px 15px 8px rgba(#a0a0a0, 0.2), -2.75px 17px 9px rgba(#a0a0a0, 0.2), -3px 19px 10px rgba(#a0a0a0, 0.2), -3.25px 20px 11px rgba(#a0a0a0, 0.1), -3.5px 22px 12px rgba(#a0a0a0, 0.1), -3.75px 24px 13px rgba(#a0a0a0, 0.1), -4px 26px 14px rgba(#a0a0a0, 0.1), -4.25px 28px 15px rgba(#a0a0a0, 0.1), -4.5px 30px 16px rgba(#a0a0a0, 0.1), -4.75px 32px 17px rgba(#a0a0a0, 0.1), -5px 34px 18px rgba(#a0a0a0, 0.1), -5.25px 36px 19px rgba(#a0a0a0, 0.1), -5.5px 38px 20px rgba(#a0a0a0, 0.1), -5.75px 39px 21px rgba(#a0a0a0, 0.1)
+
+    h1, h2, h3, h4, h5
+      color: $heading-text-color
+      font-family: 'Raleway', sans-serif
+      font-weight: 600
     
-    & + h1
-      margin-top: 4rem
-  
-  #tools + table,
-  #languages + table
-    width: 100%
-    margin-left: 1rem
+    h1
+      margin-bottom: 1rem
+      text-shadow: -1px -1px 0 $glow, 1px -1px 0 $glow, -1px 1px 0 $glow, 1px 1px 0 $glow
 
-    td
-      width: 20%
-      font-family: 'Cousine', sans-serif
-      font-size: 0.8rem
+      & + h2 strong
+        margin-top: 0
 
-      a
-        color: #bbb791
+    h2
+      & > * 
+        font-size: 1.5rem
+        font-family: Quicksand
+      & + h3
+        margin-left: 1rem
+        font-size: 1rem
+        color: black
 
-@media (max-width: 577px)
-  .jumbotron
-    h1.display-1
-      font-size: 3rem
-    
-    p.lead
-      margin-top: 2rem
-    
-  nav.nav-link
-    padding-top: 0
-    padding-bottom: 0
+        em
+          color: lighten(black, 50%)
+          font-style: normal
+      strong
+        margin-top: 1.5rem
+        display: inline-block
+      
+        & + code
+          color: lighten(#2f2f40, 35%)
 
-  #content
-    border-radius: 0
-    padding: 2rem 1rem
-    border-top: 1px solid rgb(106, 106, 131)
+    h3
+      margin-left: 0.5rem
+
+      & + ul
+        > li
+          margin: 0.5rem 0
+        ul
+          list-style-type: circle
+
+          li
+            color: lighten(black, 25%)
+
+    em
+      color: lighten(black, 50%)
+      font-style: normal
+
+    p,
+    li,
+    table
+      color: $heading-text-color
+
+      & + h1,
+      & + h2,
+      & + h3,
+      & + h4,
+      & + h5
+        margin-top: $base-vertical-whitespace
+
+    p
+      margin-left: 1rem
+
+    abbr[title]
+      text-decoration: none
+      color: darken($primary-text-color, 5%)
 
     a
-      color: rgb(112, 101, 127)
+      color: #bbb791
 
     .language-sh
-      margin-left: -15px
-      margin-right: -15px
-      
+      margin-top:    $base-vertical-whitespace
+      margin-bottom: $base-vertical-whitespace
+      margin-right: calc(-3rem - 1px)
+      margin-left: calc(-3rem - 1px)
+
       .highlight
-        padding: 0.5rem 0.25rem
-        margin-bottom: 0
+        padding: 1rem 1.5rem
 
-@import slideshow
+        .gp
+          color: lighten($base-syntax-color, 30%)
 
-@font-face
-  font-family: 'CoreCircus'
-  src: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/209981/333BF4_8_0.eot')
-  src: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/209981/333BF4_8_0.eot?#iefix') format('embedded-opentype'), url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/209981/333BF4_8_0.woff2') format('woff2'), url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/209981/333BF4_8_0.woff') format('woff'), url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/209981/333BF4_8_0.ttf') format('truetype')
+    .language-sh > .highlight
+      background-color: rgba(112, 101, 127, 0.05)
+      border-top: 1px solid rgba(black, 0.0125)
+      border-bottom: 1px solid rgba(black, 0.0125)
+
+    .language-sh .highlight
+      margin-bottom: 0
+      padding: 0.5rem
+
+    .language-sh .highlight,
+    p > code.highlighter-rouge,
+    li > code.highlighter-rouge
+      color: #8080a2
+      text-shadow: -1px -1px 0 rgba(255, 255, 255, .5), 1px -1px 0 rgba(255, 255, 255, .5), -1px 1px 0 rgba(255, 255, 255, .5), 1px 1px 0 rgba(255, 255, 255, .5)
+
+    ol, ul
+      padding-left: 1rem
+      ul
+        padding-left: 1rem
+        list-style-type: disc
+      
+      & + h1
+        margin-top: 4rem
+    
+    #tools + table,
+    #languages + table
+      width: 100%
+      margin-left: 1rem
+
+      td
+        width: 20%
+        font-family: 'Cousine', sans-serif
+        font-size: 0.8rem
+
+        a
+          color: #bbb791
+
+  @media (max-width: 577px)
+    .jumbotron
+      h1.display-1
+        font-size: 3rem
+      
+      p.lead
+        margin-top: 2rem
+      
+    nav.nav-link
+      padding-top: 0
+      padding-bottom: 0
+
+    #content
+      border-radius: 0
+      padding: 2rem 1rem
+      border-top: 1px solid rgb(106, 106, 131)
+
+      a
+        color: rgb(112, 101, 127)
+
+      .language-sh
+        margin-left: -15px
+        margin-right: -15px
+        
+        .highlight
+          padding: 0.5rem 0.25rem
+          margin-bottom: 0
+
+  @import slideshow
+
+  @font-face
+    font-family: 'CoreCircus'
+    src: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/209981/333BF4_8_0.eot')
+    src: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/209981/333BF4_8_0.eot?#iefix') format('embedded-opentype'), url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/209981/333BF4_8_0.woff2') format('woff2'), url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/209981/333BF4_8_0.woff') format('woff'), url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/209981/333BF4_8_0.ttf') format('truetype')

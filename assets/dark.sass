@@ -1,362 +1,379 @@
 ---
 ---
 
-@import url('https://fonts.googleapis.com/css?family=Nunito|Quicksand|Raleway|Cousine')
-$page-shadow-front-color: rgb(187, 187, 255)
-$page-shadow-back-color:  rgb(221, 221, 255)
+@media (prefers-color-scheme: dark)
+  @import url('https://fonts.googleapis.com/css?family=Nunito|Quicksand|Raleway|Cousine')
+  $page-shadow-front-color: rgb(187, 187, 255)
+  $page-shadow-back-color:  rgb(221, 221, 255)
 
-$heading-shadow-front-color: transparentize($page-shadow-front-color, 0.5)
-$heading-shadow-back-color:  transparentize($page-shadow-back-color,  0.5)
+  $heading-shadow-front-color: transparentize($page-shadow-front-color, 0.5)
+  $heading-shadow-back-color:  transparentize($page-shadow-back-color,  0.5)
 
-$box-shadow-front-color: rgb(255,227,212)
-$box-shadow-back-color:  rgb(255,243,187)
+  $box-shadow-front-color: rgb(255,227,212)
+  $box-shadow-back-color:  rgb(255,243,187)
 
-$img-shadow-front-color: rgb(153, 204, 255)
-$img-shadow-back-color:  rgb(221, 238, 255)
+  $img-shadow-front-color: rgb(153, 204, 255)
+  $img-shadow-back-color:  rgb(221, 238, 255)
 
-$available-link-color:   rgb(91, 89, 63)
-$unavailable-link-color: rgb(144, 140, 103)
-$button-border-color:    $unavailable-link-color
-$resume-city-color:      rgb(63, 89, 63)
+  $available-link-color:   rgb(91, 89, 63)
+  $unavailable-link-color: rgb(144, 140, 103)
+  $button-border-color:    $unavailable-link-color
+  $resume-city-color:      rgb(63, 89, 63)
 
-$primary-text-color: rgb(18, 18, 45)
-$heading-text-color: rgb(47,47,64)
-$lead-text-color:    rgb(178,163,95)
+  $primary-text-color: rgb(18, 18, 45)
+  $heading-text-color: rgb(47,47,64)
+  $lead-text-color:    rgb(178,163,95)
 
-$base-vertical-whitespace: 2rem
+  $base-vertical-whitespace: 2rem
 
-$base-letter-spacing: 1px
+  $base-letter-spacing: 1px
 
-$base-syntax-color: rgb(64, 64, 64)
+  $base-syntax-color: rgb(64, 64, 64)
 
-$slightly-transparent: .7
-$very-transparent:     .2
+  $slightly-transparent: .7
+  $very-transparent:     .2
 
-$glow-color:       #6d6f6f
-$faded-glow-color: $glow-color - rgb(20, 20, 20)
-$text-glow:       -1px -1px 0 rgba($glow-color, $slightly-transparent), 1px -1px 0 rgba($glow-color, $slightly-transparent), -1px 1px 0 rgba($glow-color, $slightly-transparent), 1px 1px 0 rgba($glow-color, $slightly-transparent)
-$faded-text-glow: -1px -1px 0 rgba($faded-glow-color, $slightly-transparent), 1px -1px 0 rgba($faded-glow-color, $slightly-transparent), -1px 1px 0 rgba($faded-glow-color, $slightly-transparent), 1px 1px 0 rgba($faded-glow-color, $slightly-transparent)
-$box-glow:         $text-glow, -21px 39px 20px rgba(black, $slightly-transparent)
-$black-text-glow: -1px -1px 0 rgba(black, $very-transparent), 1px -1px 0 rgba(black, $very-transparent), -1px 1px 0 rgba(black, $very-transparent), 1px 1px 0 rgba(black, $very-transparent)
-$black-box-glow:   $black-text-glow, -21px 39px 20px rgba(black, $slightly-transparent)
+  $content-color:    rgb(54.6, 56.6, 57.4)
+  $glow-color:       #6d6f6f
+  $faded-glow-color: $glow-color - rgb(20, 20, 20)
+  $text-glow:       -1px -1px 0 rgba($glow-color, $slightly-transparent), 1px -1px 0 rgba($glow-color, $slightly-transparent), -1px 1px 0 rgba($glow-color, $slightly-transparent), 1px 1px 0 rgba($glow-color, $slightly-transparent)
+  $faded-text-glow: -1px -1px 0 rgba($faded-glow-color, $slightly-transparent), 1px -1px 0 rgba($faded-glow-color, $slightly-transparent), -1px 1px 0 rgba($faded-glow-color, $slightly-transparent), 1px 1px 0 rgba($faded-glow-color, $slightly-transparent)
+  $box-glow:         $text-glow, -21px 39px 20px rgba(black, $slightly-transparent)
+  $black-text-glow: -1px -1px 0 rgba(black, $very-transparent), 1px -1px 0 rgba(black, $very-transparent), -1px 1px 0 rgba(black, $very-transparent), 1px 1px 0 rgba(black, $very-transparent)
+  $black-box-glow:   $black-text-glow, -21px 39px 20px rgba(black, $slightly-transparent)
 
-$tower:             -4px 4px 2px rgba(black, $slightly-transparent)
-$transparent-tower: -4px 4px 2px rgba(black, $very-transparent)
-$short-tower:       $text-glow, $tower
+  $tower:             -4px 4px 2px rgba(black, $slightly-transparent)
+  $transparent-tower: -4px 4px 2px rgba(black, $very-transparent)
+  $short-tower:       $text-glow, $tower
 
-=shadow($mode, $n, $front, $back)
-  #{$mode}-shadow: #{$n}px #{$n * 2}px 0 $front, #{$n * 2}px #{$n * 4}px 0 $back
+  =shadow($mode, $n, $front, $back)
+    #{$mode}-shadow: #{$n}px #{$n * 2}px 0 $front, #{$n * 2}px #{$n * 4}px 0 $back
 
-body
-  background-color: #292b2c
+  body
+    background-color: #292b2c
 
-img:not(.emoji)
-  margin-top: $base-vertical-whitespace
-  margin-bottom: $base-vertical-whitespace
-  border-radius: 0.25rem
-  box-shadow: $text-glow, $transparent-tower
+  img:not(.emoji)
+    margin-top: $base-vertical-whitespace
+    margin-bottom: $base-vertical-whitespace
+    border-radius: 0.25rem
+    box-shadow: $text-glow, $transparent-tower
 
-hr.my-4,
-hr.my-2,
-#content hr
-  border-top: 1px solid transparentize(rgb(208,208,240), 0.75)
+  hr.my-4,
+  hr.my-2,
+  #content hr
+    border-top: 1px solid transparentize(rgb(208,208,240), 0.75)
 
-.jumbotron h1.display-1,
-#content h1,
-#content h2,
-#content h3,
-#content h5
-.card-deck .card h4.card-title
-  font-family: monospace
+  .jumbotron h1.display-1,
+  #content h1,
+  #content h2,
+  #content h3,
+  #content h5
+  .card-deck .card h4.card-title
+    font-family: monospace
 
-.jumbotron .lead,
-#content p,
-#content li
-  font-family: 'Nunito', sans-serif
+  .jumbotron .lead,
+  #content p,
+  #content li
+    font-family: 'Nunito', sans-serif
 
-.jumbotron
-  background-color: transparent
-  margin-top: 0
-  margin-bottom: 0
-  padding-bottom: 1rem
+  .jumbotron
+    background-color: transparent
+    margin-top: 0
+    margin-bottom: 0
+    padding-bottom: 1rem
 
-  h1.display-1
-    display: flex
-    align-items: center
-    justify-content: center
-    font-family: 'CoreCircus', sans-serif
-    text-transform: uppercase
-    font-size: 10vw
-    text-align: center
-    line-height: 1
-    margin: 0
-    width: 100%
-    height: 100%
-    transform: translateZ(0)
-    backface-visibility: hidden
-    color: $heading-text-color
-    text-shadow: $box-glow
+    h1.display-1
+      display: flex
+      align-items: center
+      justify-content: center
+      font-family: 'CoreCircus', sans-serif
+      text-transform: uppercase
+      font-size: 10vw
+      text-align: center
+      line-height: 1
+      margin: 0
+      width: 100%
+      height: 100%
+      transform: translateZ(0)
+      backface-visibility: hidden
+      color: $heading-text-color
+      text-shadow: $box-glow
 
-  p.lead
-    letter-spacing: $base-letter-spacing
-    color: $glow-color
-    text-align: center
-    margin-top: 2rem
+    p.lead
+      letter-spacing: $base-letter-spacing
+      color: $glow-color
+      text-align: center
+      margin-top: 2rem
 
-.nav
-  margin-bottom: 0
+  .nav
+    margin-bottom: 0
 
-  .nav-link
-    text-transform: lowercase
-    letter-spacing: $base-letter-spacing
-    color: rgb(187, 183, 145)
-    font-family: 'Quicksand', sans-serif
-    padding-top: 0
-    padding-bottom: 0
-    text-shadow: $transparent-tower
+    .nav-link
+      text-transform: lowercase
+      letter-spacing: $base-letter-spacing
+      color: rgb(187, 183, 145)
+      font-family: 'Quicksand', sans-serif
+      padding-top: 0
+      padding-bottom: 0
+      text-shadow: $transparent-tower
 
-    &.active
-      color: rgb(144, 134, 103)
-      text-shadow: $tower
+      &.active
+        color: rgb(144, 134, 103)
+        text-shadow: $tower
 
-.footer
-  &.container
-    margin-top: $base-vertical-whitespace * 2
+  .footer
+    &.container
+      margin-top: $base-vertical-whitespace * 2
+      margin-bottom: $base-vertical-whitespace
+
+    .fa:hover
+      text-decoration: none
+
+  .card-deck
     margin-bottom: $base-vertical-whitespace
 
-  .fa:hover
-    text-decoration: none
+    .card
+      background-color: $content-color
+      margin-top: $base-vertical-whitespace + 1rem
+      border: none
 
-.card-deck
-  margin-bottom: $base-vertical-whitespace
+      box-shadow: $box-glow
 
-  .card
-    background-color: rgba($glow-color, 0.2)
+      p.card-text
+        color: #6a6a83 + rgb(20, 20, 20)
+        font-family: 'Raleway', sans-serif
+
+      h4.card-title
+        color: $glow-color + rgb(20, 20, 20)
+        text-shadow: $black-text-glow
+
+    .card-footer
+      border-top: none
+      background-color: rgba(black, 0.15)
+
+      small.text-muted
+        color: $glow-color !important
+        text-transform: uppercase
+        text-shadow: $black-text-glow
+
+  span.btn-primary
+    color: $unavailable-link-color
+
+    &:hover
+      cursor: default
+
+  .btn-primary,
+  .btn-primary:hover,
+  .btn-primary:active,
+  .btn-primary:visited,
+    background-color: transparent
+    border-color: rgb(106, 106, 131) + rgb(30, 30, 30)
+    color:        rgb(106, 106, 131) + rgb(30, 30, 30) !important
+    font-family:  'Quicksand', sans-serif
+    text-shadow:  -2px 2px 1px rgba(black, $very-transparent)
+    box-shadow:   $transparent-tower
+
+    &:focus
+      box-shadow: none
+
+  .footer,
+  .card-deck .card
+    a.fab,
+    a.fas
+      text-align: center
+      width: 100%
+      color: rgb(106, 106, 131)
+      text-shadow: -2px 2px 1px rgba(black, $very-transparent)
+
+      &:hover
+        text-decoration: none
+
+  .card-deck .card
+    .row
+      justify-content: center
+
+      a.fab,
+      a.fas
+        text-shadow: none
+
+  #content,
+  #instructions
+    margin-top: $base-vertical-whitespace + 1rem
+    padding: $base-vertical-whitespace + 1rem
+    border-radius: 0.25rem
     margin-top: $base-vertical-whitespace + 1rem
     border: none
 
-    box-shadow: $box-glow
-
-    p.card-text
-      color: #6a6a83 + rgb(20, 20, 20)
+    h1, h2, h3, h4, h5
+      color: $heading-text-color + rgb(80, 80, 80)
+      text-shadow: $black-text-glow
       font-family: 'Raleway', sans-serif
+      font-weight: 600
+    
+    h1
+      margin-bottom: 1rem
 
-    h4.card-title
-      color: $glow-color + rgb(20, 20, 20)
-      text-shadow: $black-text-glow
+      & + h2 strong
+        margin-top: 0
 
-  .card-footer
-    border-top: none
-    background-color: rgba(black, 0.15)
+    h2
+      & > * 
+        font-size: 1.5rem
+        font-family: Quicksand
+      & + h3
+        margin-left: 1rem
+        font-size: 1rem
+        color: lighten($resume-city-color, 30%)
 
-    small.text-muted
-      color: $glow-color !important
-      text-transform: uppercase
-      text-shadow: $black-text-glow
+        em
+          color: lighten(black, 50%)
+          font-style: normal
+      strong
+        margin-top: 1.5rem
+        display: inline-block
+      
+        & + code
+          color: lighten(#2f2f40, 35%)
+      code
+        background-color: rgba($heading-text-color, 0.25)
+        border: 1px solid rgba($glow-color, 0.25)
+        text-shadow: none
 
-span.btn-primary
-  color: $unavailable-link-color
+    h3
+      margin-left: 0.5rem
 
-  &:hover
-    cursor: default
+      & + ul
+        > li
+          margin: 0.5rem 0
+        ul
+          list-style-type: circle
 
-.btn-primary,
-.btn-primary:hover,
-.btn-primary:active,
-.btn-primary:visited,
-  background-color: transparent
-  border-color: rgb(106, 106, 131) + rgb(30, 30, 30)
-  color:        rgb(106, 106, 131) + rgb(30, 30, 30) !important
-  font-family:  'Quicksand', sans-serif
-  text-shadow:  -2px 2px 1px rgba(black, $very-transparent)
-  box-shadow:   $transparent-tower
+          li
+            color: $heading-text-color + rgb(100 ,100, 100)
 
-  &:focus
-    box-shadow: none
+    em
+      font-style: oblique
 
-.footer a.fab
-  color: rgb(106, 106, 131)
-  // text-shadow: -1px -1px 0 rgba(255, 255, 255, .7), 1px -1px 0 rgba(255, 255, 255, .7), -1px 1px 0 rgba(255, 255, 255, .7), 1px 1px 0 rgba(255, 255, 255, .7), -2px 4px 2px rgba(#a0a0a0, 0.3), -3px 6px 3px rgba(#a0a0a0, 0.2), -4px 8px 4px rgba(#a0a0a0, 0.1)
-  text-shadow: -2px 2px 1px rgba(black, $very-transparent)
+    p,
+    li,
+    table
+      color: $glow-color + rgb(20, 20, 20,)
 
-#content,
-#instructions
-  margin-top: $base-vertical-whitespace + 1rem
-  padding: $base-vertical-whitespace + 1rem
-  border-radius: 0.25rem
-  margin-top: $base-vertical-whitespace + 1rem
-  border: none
+      & + h1,
+      & + h2,
+      & + h3,
+      & + h4,
+      & + h5
+        margin-top: $base-vertical-whitespace
 
-  h1, h2, h3, h4, h5
-    color: $heading-text-color + rgb(80, 80, 80)
-    text-shadow: $black-text-glow
-    font-family: 'Raleway', sans-serif
-    font-weight: 600
-  
-  h1
-    margin-bottom: 1rem
-
-    & + h2 strong
-      margin-top: 0
-
-  h2
-    & > * 
-      font-size: 1.5rem
-      font-family: Quicksand
-    & + h3
+    p
       margin-left: 1rem
-      font-size: 1rem
-      color: lighten($resume-city-color, 30%)
 
-      em
-        color: lighten(black, 50%)
-        font-style: normal
-    strong
-      margin-top: 1.5rem
-      display: inline-block
-    
-      & + code
-        color: lighten(#2f2f40, 35%)
-    code
-      background-color: rgba($heading-text-color, 0.25)
-      border: 1px solid rgba($glow-color, 0.25)
-      text-shadow: none
-
-  h3
-    margin-left: 0.5rem
-
-    & + ul
-      > li
-        margin: 0.5rem 0
-      ul
-        list-style-type: circle
-
-        li
-          color: $heading-text-color + rgb(100 ,100, 100)
-
-  em
-    font-style: oblique
-
-  p,
-  li,
-  table
-    color: $glow-color + rgb(20, 20, 20,)
-
-    & + h1,
-    & + h2,
-    & + h3,
-    & + h4,
-    & + h5
-      margin-top: $base-vertical-whitespace
-
-  p
-    margin-left: 1rem
-
-  abbr[title]
-    text-decoration: none
-    color: darken($glow-color, 5%)
-
-  a
-    color: #bbb791
-
-  .language-sh
-    margin-top:    $base-vertical-whitespace
-    margin-bottom: $base-vertical-whitespace
-    margin-right: calc(-3rem - 1px)
-    margin-left: calc(-3rem - 1px)
-
-    .highlight
-      padding: 1rem 1.5rem
-
-      .gp
-        color: lighten($base-syntax-color, 30%)
-
-  .language-sh > .highlight
-    background-color: rgba($heading-text-color, 0.25)
-    border-top:       1px solid rgba($glow-color, 0.25)
-    border-bottom:    1px solid rgba($glow-color, 0.25)
-
-  .language-sh .highlight
-    margin-bottom: 0
-    padding:       0.5rem
-
-  .language-sh .highlight,
-  p > code.highlighter-rouge,
-  li > code.highlighter-rouge
-    color:            #8080a2
-    background-color: rgba($heading-text-color, 0.25)
-    border: 1px solid rgba($glow-color, 0.25)
-
-    .highlight
-      border: none
-      background-color: transparent
-
-  ol, ul
-    padding-left: 1rem
-    ul
-      padding-left: 1rem
-      list-style-type: disc
-    
-    & + h1
-      margin-top: 4rem
-  
-  #tools + table,
-  #languages + table
-    width: 100%
-    margin-left: 1rem
-
-    td
-      width: 20%
-      font-family: 'Cousine', sans-serif
-      font-size: 0.8rem
-
-      a
-        color: #bbb791
-
-#content
-  background-color: rgba($glow-color, 0.2)
-  box-shadow: $box-glow
-
-#themes
-  margin-bottom: 3rem
-
-  .btn.btn-primary
-    margin:           0.5rem
-    background-color: rgba($glow-color, 0.2)
-    box-shadow:       $transparent-tower
-
-
-@media (max-width: 577px)
-  .jumbotron
-    h1.display-1
-      font-size: 3rem
-    
-    p.lead
-      margin-top: 2rem
-    
-  nav.nav-link
-    padding-top: 0
-    padding-bottom: 0
-
-  #content
-    border-radius: 0
-    padding: 2rem 1rem
-    border-top: 1px solid rgb(106, 106, 131)
+    abbr[title]
+      text-decoration: none
+      color: darken($glow-color, 5%)
 
     a
-      color: rgb(112, 101, 127)
+      color: #bbb791
 
     .language-sh
-      margin-left: -15px
-      margin-right: -15px
-      
+      margin-top:    $base-vertical-whitespace
+      margin-bottom: $base-vertical-whitespace
+      margin-right: calc(-3rem - 1px)
+      margin-left: calc(-3rem - 1px)
+
       .highlight
-        padding: 0.5rem 0.25rem
-        margin-bottom: 0
+        padding: 1rem 1.5rem
 
-@import slideshow
+        .gp
+          color: lighten($base-syntax-color, 30%)
 
-@font-face
-  font-family: 'CoreCircus'
-  src: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/209981/333BF4_8_0.eot')
-  src: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/209981/333BF4_8_0.eot?#iefix') format('embedded-opentype'), url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/209981/333BF4_8_0.woff2') format('woff2'), url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/209981/333BF4_8_0.woff') format('woff'), url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/209981/333BF4_8_0.ttf') format('truetype')
+    .language-sh > .highlight
+      background-color: rgba($heading-text-color, 0.25)
+      border-top:       1px solid rgba($glow-color, 0.25)
+      border-bottom:    1px solid rgba($glow-color, 0.25)
+
+    .language-sh .highlight
+      margin-bottom: 0
+      padding:       0.5rem
+
+    .language-sh .highlight,
+    p > code.highlighter-rouge,
+    li > code.highlighter-rouge
+      color:            #8080a2
+      background-color: rgba($heading-text-color, 0.25)
+      border: 1px solid rgba($glow-color, 0.25)
+
+      .highlight
+        border: none
+        background-color: transparent
+
+    ol, ul
+      padding-left: 1rem
+      ul
+        padding-left: 1rem
+        list-style-type: disc
+      
+      & + h1
+        margin-top: 4rem
+    
+    #tools + table,
+    #languages + table
+      width: 100%
+      margin-left: 1rem
+
+      td
+        width: 20%
+        font-family: 'Cousine', sans-serif
+        font-size: 0.8rem
+
+        a
+          color: #bbb791
+
+  #content
+    background-color: $content-color
+    box-shadow: $box-glow
+
+  #themes
+    margin-bottom: 3rem
+
+    .btn.btn-primary
+      margin:           0.5rem
+      background-color: rgba($glow-color, 0.2)
+      box-shadow:       $transparent-tower
+
+
+  @media (max-width: 577px)
+    .jumbotron
+      h1.display-1
+        font-size: 3rem
+      
+      p.lead
+        margin-top: 2rem
+      
+    nav.nav-link
+      padding-top: 0
+      padding-bottom: 0
+
+    #content
+      border-radius: 0
+      padding: 2rem 1rem
+      border-top: 1px solid rgb(106, 106, 131)
+
+      a
+        color: rgb(112, 101, 127)
+
+      .language-sh
+        margin-left: -15px
+        margin-right: -15px
+        
+        .highlight
+          padding: 0.5rem 0.25rem
+          margin-bottom: 0
+
+  @import slideshow
+
+  @font-face
+    font-family: 'CoreCircus'
+    src: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/209981/333BF4_8_0.eot')
+    src: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/209981/333BF4_8_0.eot?#iefix') format('embedded-opentype'), url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/209981/333BF4_8_0.woff2') format('woff2'), url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/209981/333BF4_8_0.woff') format('woff'), url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/209981/333BF4_8_0.ttf') format('truetype')

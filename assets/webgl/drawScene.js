@@ -3,7 +3,7 @@ const degToRad = d => d * Math.PI / 180
 const fieldOfViewRadians = degToRad(60)
 const zFar               = 10
 
-const colors = new Uint8Array([
+let colors = new Uint8Array([
   // Bottom
   244, 244, 244,
   244, 244, 244,
@@ -47,6 +47,9 @@ const colors = new Uint8Array([
   252, 252, 252,
   252, 252, 252,
 ])
+
+if (window.matchMedia('(prefers-color-scheme: dark)').matches)
+  colors = colors.map(c => c - 200)
 
 let lastFrame
 
