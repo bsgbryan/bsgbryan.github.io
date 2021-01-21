@@ -30,10 +30,10 @@
   actions:
     - type:  app-store-ios
       label: View on the iOS App Store
-      href:  https://itunes.apple.com/us/app/jumpy-mcrunface/id1151471322?mt=8
+      href:  https://apps.apple.com/us/app/my-high-score/id1529813382
     - type:  google-play
       label: View on the Google Play Store
-      href:  https://itunes.apple.com/us/app/jumpy-mcrunface/id1151471322?mt=8
+      href:  https://play.google.com/store/apps/details?id=com.dab.software.myhighscore
 
 - name:  Jyn
   pitch: A simple, fun, fully asyn api tool
