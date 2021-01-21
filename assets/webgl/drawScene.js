@@ -49,7 +49,7 @@ let colors = new Uint8Array([
 ])
 
 if (window.matchMedia('(prefers-color-scheme: dark)').matches)
-  colors = colors.map(c => c - 200)
+  colors = colors.map(c => c - 220)
 
 let lastFrame
 
